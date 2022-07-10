@@ -1,0 +1,26 @@
+/* reseteo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#pageTitle {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+#pokedex {
+  height: 100vh;
+  display: flex;
+  border: 2px saddlebrown solid;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#pokeName {
+}
