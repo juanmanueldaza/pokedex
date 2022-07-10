@@ -12,6 +12,12 @@ button.onclick = async () => {
   changeName(data.name);
 };
 
+input.onkeydown = (e) => {
+  if (e.keyCode === 13) {
+    button.click();
+  }
+};
+
 async function searchByName(name) {
   let search = `https://pokeapi.co/api/v2/pokemon/${name}`;
   let response = await fetch(search);
