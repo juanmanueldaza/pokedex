@@ -11,6 +11,7 @@
 
 body {
   height: 100vh;
+  background-image: url();
 }
 
 #pokedex {
@@ -23,4 +24,25 @@ body {
 }
 
 #pokeName {
+}
+#pokeImgContainer{
+  border: 3px solid #2E2E2E;
+  padding: 5px;
+  display: flex;
+  background-color:#C7C7C7 ;
+  z-index: -2;
+}
+#pokeImg{
+  border: 3px solid #2E2E2E;
+  flex: 1;
+  background-color: #CDFFFE;
+  z-index: -1;
+
+
+}
+#overlay{
+  background-color: rgba(255,255,255,0.5);
+  border: red solid 3px;
+  flex: 1;
+  display: flex;
 }
