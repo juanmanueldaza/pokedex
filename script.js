@@ -6,7 +6,7 @@ let image = document.getElementById("pokeImg");
 let nameTitle = document.getElementById("pokeName");
 
 button.onclick = async () => {
-  let data = await searchByName(input.value);
+  let data = await searchByName(input.value.toLowerCase());
   let src = getImgSrc(data.id);
   changeImgSrc(src);
   changeName(data.name);
@@ -34,5 +34,5 @@ function changeImgSrc(src) {
 }
 
 function changeName(name) {
-  nameTitle.innerHTML = name;
+  nameTitle.innerHTML = name.charAt(0).toUpperCase() + name.slice(1);
 }
