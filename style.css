@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #pageTitle {
@@ -24,29 +25,40 @@ body {
 }
 
 #pokeName {
+  
 }
+
+#pokeImgContainerBorder{
+  border: 5px solid #2E2E2E;
+  border-radius: 11%;
+  background-color:#2E2E2E;
+  clip-path: polygon(100% 0, 100% 100%, 25% 100%, 0 75%, 0 0);
+}
+
 #pokeImgContainer{
-  border: 3px solid #2E2E2E;
-  padding: 5px;
+  border-radius: 10%;
+  padding: 10px 30px 30px 30px;
+  clip-path: polygon(100% 0, 100% 100%, 25% 100%, 0 75%, 0 0);
   display: flex;
-  background-color:#C7C7C7 ;
+  background-color:#C7C7C7;
   z-index: -2;
 }
+
 #pokeImg{
   border: 3px solid #2E2E2E;
+  border-radius: 10%;
   flex: 1;
   background-color: #CDFFFE;
   z-index: -1;
-
-
 }
+
 #overlay{
   background-color: rgba(255,255,255,0.5);
   border: red solid 3px;
+  border-radius: 10%;
   flex: 1;
   display: flex;
 }
-
 
 .hider {
   display: none;
