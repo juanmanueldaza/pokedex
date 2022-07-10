@@ -4,12 +4,18 @@ let input = document.getElementById("input");
 let button = document.getElementById("button");
 let image = document.getElementById("pokeImg");
 let nameTitle = document.getElementById("pokeName");
+let backButton = document.getElementById("backward");
+let forwardButton = document.getElementById("forward");
+let controls = document.getElementById("controls");
+let data;
+let id;
 
 button.onclick = async () => {
-  let data = await searchByName(input.value.toLowerCase());
+  data = await searchByName(input.value.toLowerCase());
   let src = getImgSrc(data.id);
   changeImgSrc(src);
   changeName(data.name);
+  controls.classList.remove("hider");
 };
 
 input.onkeydown = (e) => {
@@ -17,6 +23,12 @@ input.onkeydown = (e) => {
     button.click();
   }
 };
+
+forwardButton.onclick = () =>{
+  let src = getImgSrc(data.id + 1);
+  changeImgSrc(src);
+  changeName(data.name);
+}
 
 async function searchByName(name) {
   let search = `https://pokeapi.co/api/v2/pokemon/${name}`;
