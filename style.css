@@ -57,7 +57,7 @@ body {
 #overlay{
   margin-top: 5%;
   height: 90%;
-  /* background-color: rgba(255,255,255,0.5); */
+  background-color: rgba(255,255,255,0.5);
   border: red solid 3px;
   border-radius: 10%;
   flex: 1;
