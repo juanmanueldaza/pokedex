@@ -16,6 +16,7 @@ button.onclick = async () => {
   changeImgSrc(src);
   changeName(data.name);
   controls.classList.remove("hider");
+  inputContainer.classList.remove("hider");
 };
 
 input.onkeydown = (e) => {

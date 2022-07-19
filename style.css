@@ -36,6 +36,8 @@ body {
 }
 
 #pokeImgContainer{
+  height: 250px;
+  width: 250px;
   border-radius: 10%;
   padding: 10px 30px 30px 30px;
   clip-path: polygon(100% 0, 100% 100%, 25% 100%, 0 75%, 0 0);
@@ -53,6 +55,8 @@ body {
 }
 
 #overlay{
+  margin-top: 5%;
+  height: 90%;
   background-color: rgba(255,255,255,0.5);
   border: red solid 3px;
   border-radius: 10%;
