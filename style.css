@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #pageTitle {
@@ -50,39 +50,44 @@ main {
   border: 2px saddlebrown solid;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
-}
+  align-items: left;
 
-#pokeImgContainerBorder{
-  border: 5px solid #2E2E2E;
+  display: flex;
+  padding-top: 9.5%;
+}
+#right-0 {
+  width: 50%;
+}
+#pokeImgContainerBorder {
+  border: 5px solid #2e2e2e;
   border-radius: 11%;
-  background-color:#2E2E2E;
+  background-color: #2e2e2e;
   clip-path: polygon(100% 0, 100% 100%, 25% 100%, 0 75%, 0 0);
 }
 
-#pokeImgContainer{
+#pokeImgContainer {
   height: 250px;
   width: 250px;
   border-radius: 10%;
   padding: 10px 30px 30px 30px;
   clip-path: polygon(100% 0, 100% 100%, 25% 100%, 0 75%, 0 0);
   display: flex;
-  background-color:#C7C7C7;
+  background-color: #c7c7c7;
   z-index: -2;
 }
 
-#pokeImg{
-  border: 3px solid #2E2E2E;
+#pokeImg {
+  border: 3px solid #2e2e2e;
   border-radius: 10%;
   flex: 1;
-  background-color: #CDFFFE;
+  background-color: #cdfffe;
   z-index: -1;
 }
 
-#overlay{
+#overlay {
   margin-top: 5%;
   height: 90%;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   border: red solid 3px;
   border-radius: 10%;
   flex: 1;
@@ -91,4 +96,15 @@ main {
 
 .hider {
   display: none;
+}
+.rojo {
+  background-color: #de3d2b;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.righteros {
+  width: 100%;
 }
