@@ -15,17 +15,42 @@ body {
   background-image: url();
 }
 
-#pokedex {
-  height: 100vh;
+main {
+  aspect-ratio: 8/5;
   display: flex;
+}
+
+#left {
+  display: flex;
+  flex: 7;
   border: 2px saddlebrown solid;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
 
-#pokeName {
-  
+#center {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border: 2px saddlebrown solid;
+}
+
+.bisagra {
+  flex: 1;
+  border: 2px blue solid;
+}
+
+#bisagra-central {
+  flex: 3;
+}
+
+#right {
+  flex: 7;
+  border: 2px saddlebrown solid;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 #pokeImgContainerBorder{
