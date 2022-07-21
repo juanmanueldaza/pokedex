@@ -18,10 +18,8 @@
     transform: translate(-52%, -15%);
 }
 
-#svg {
+svg {
     position: absolute;
     opacity: 80%;
-    left: 45%;
-    transform: translate(-51%, -12%);
     z-index: 9;
 }
