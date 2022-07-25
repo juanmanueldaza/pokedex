@@ -92,3 +92,17 @@ main {
 .hider {
   display: none;
 }
+
+
+
+/* 
+#svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+input {
+  font-family: 'Press Start 2P';font-size: 22px;
+} */
