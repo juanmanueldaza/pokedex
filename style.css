@@ -36,10 +36,6 @@ main {
   border: 2px saddlebrown solid;
 }
 
-.bisagra {
-  flex: 1;
-  border: 2px blue solid;
-}
 
 #bisagra-central {
   flex: 3;
