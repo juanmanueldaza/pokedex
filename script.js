@@ -24,7 +24,7 @@ button.onclick = async () => {
 
 input.onkeydown = (e) => {
   if (e.keyCode === 13) {
-    button.click();
+    button.onclick();
   }
 };
 
