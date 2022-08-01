@@ -1,7 +1,7 @@
 // Guardamos el elemento input en la variable input
 let input = document.getElementById("input");
 // Guardamos el elemento button en la variable button
-let button = document.getElementById("button");
+let button = document.getElementById("main_light_blue_button");
 let image = document.getElementById("pokeImg");
 let nameTitle = document.getElementById("pokeName");
 let backButton = document.getElementById("backward");
@@ -10,7 +10,10 @@ let controls = document.getElementById("controls");
 let data;
 let id;
 
+
+
 button.onclick = async () => {
+  console.log('click');
   data = await searchByName(input.value.toLowerCase());
   let src = getImgSrc(data.id);
   changeImgSrc(src);
