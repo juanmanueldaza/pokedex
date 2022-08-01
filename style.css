@@ -53,7 +53,7 @@ main {
   align-items: center;
 }
 
-#pokeImgContainerBorder{
+/* #pokeImgContainerBorder{
   border: 5px solid #2E2E2E;
   border-radius: 11%;
   background-color:#2E2E2E;
@@ -69,13 +69,14 @@ main {
   display: flex;
   background-color:#C7C7C7;
   z-index: -2;
-}
+} */
 
 #pokeImg{
-  border: 3px solid #2E2E2E;
+  /* border: 3px solid #2E2E2E; */
   border-radius: 10%;
-  flex: 1;
-  background-color: #CDFFFE;
+  width: 100%;
+  /* flex: 1; */
+  /* background-color: #CDFFFE; */
   z-index: -1;
 }
 
@@ -92,3 +93,18 @@ main {
 .hider {
   display: none;
 }
+
+#svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+input {
+  font-family: 'Press Start 2P';font-size: 22px;
+  outline: none;
+  border: none;
+  background: none;
+}
+

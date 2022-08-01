@@ -1,0 +1,25 @@
+/* reseteo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.img-overlay-wrap {
+    height: 69px;
+    width: 90px;
+    background-color: aqua;
+    position: relative;
+}
+
+#img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-52%, -15%);
+}
+
+svg {
+    position: absolute;
+    opacity: 80%;
+    z-index: 9;
+}
