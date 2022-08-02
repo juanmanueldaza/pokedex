@@ -18,8 +18,6 @@ button.onclick = async () => {
   let src = getImgSrc(data.id);
   changeImgSrc(src);
   changeName(data.name);
-  controls.classList.remove("hider");
-  inputContainer.classList.remove("hider");
 };
 
 input.onkeydown = (e) => {
@@ -28,11 +26,11 @@ input.onkeydown = (e) => {
   }
 };
 
-forwardButton.onclick = () =>{
-  let src = getImgSrc(data.id + 1);
-  changeImgSrc(src);
-  changeName(data.name);
-}
+// forwardButton.onclick = () =>{
+//   let src = getImgSrc(data.id + 1);
+//   changeImgSrc(src);
+//   changeName(data.name);
+// }
 
 async function searchByName(name) {
   let search = `https://pokeapi.co/api/v2/pokemon/${name}`;
