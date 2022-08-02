@@ -2,20 +2,26 @@
 let input = document.getElementById("input");
 // Guardamos el elemento button en la variable button
 let button = document.getElementById("main_light_blue_button");
+
 let image = document.getElementById("pokeImg");
 let nameTitle = document.getElementById("pokeName");
-let backButton = document.getElementById("backward");
-let forwardButton = document.getElementById("forward");
+
+let backButton = document.getElementById("d_pad_left");
+let forwardButton = document.getElementById("d_pad_right");
+
+
 let controls = document.getElementById("controls");
 let data;
 let id;
+let name;
 
 
 
 button.onclick = async () => {
-  console.log('click');
   data = await searchByName(input.value.toLowerCase());
   let src = getImgSrc(data.id);
+  id = data.id;
+  name = data.name;
   changeImgSrc(src);
   changeName(data.name);
 };
@@ -26,11 +32,23 @@ input.onkeydown = (e) => {
   }
 };
 
-// forwardButton.onclick = () =>{
-//   let src = getImgSrc(data.id + 1);
-//   changeImgSrc(src);
-//   changeName(data.name);
-// }
+forwardButton.onclick = async () => {
+  id += 1;
+  let src = getImgSrc(id);
+  changeImgSrc(src);
+  let nameee = await searchByName(id)
+  changeName(nameee.name);
+  input.value = id;
+}
+
+backButton.onclick = async () => {
+  id -= 1;
+  let src = getImgSrc(id);
+  changeImgSrc(src);
+  let nameee = await searchByName(id)
+  changeName(nameee.name);
+  input.value = id;
+}
 
 async function searchByName(name) {
   let search = `https://pokeapi.co/api/v2/pokemon/${name}`;
@@ -43,6 +61,8 @@ async function searchByName(name) {
   let data = await response.json();
   return data;
 }
+
+
 
 function getImgSrc(id) {
   let newImgSrc = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
