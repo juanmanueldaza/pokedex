@@ -21,6 +21,7 @@
 
 input {
   font-size: 22px;
+  color: #323232;
   outline: none;
   border: none;
   background: none;
@@ -36,4 +37,12 @@ input {
 #pokeName {
   font-size: 35px;
   color: white;
+}
+
+#d_pad_left:hover, #d_pad_right:hover, #d_pad_up:hover, #d_pad_down:hover {
+  fill:aqua;
+}
+
+#_317605376:hover {
+  fill: yellow;
 }

@@ -9,11 +9,15 @@ let nameTitle = document.getElementById("pokeName");
 let backButton = document.getElementById("d_pad_left");
 let forwardButton = document.getElementById("d_pad_right");
 
+let upButton = document.getElementById("d_pad_up");
+let downButton = document.getElementById('d_pad_down');
 
-let controls = document.getElementById("controls");
 let data;
 let id;
 let name;
+
+let imgUrlArray = ["pokemon/", "pokemon/back/", "pokemon/shiny/", "pokemon/back/shiny/"];
+let imgUrlPosition = 0;
 
 
 
@@ -50,6 +54,24 @@ backButton.onclick = async () => {
   input.value = id;
 }
 
+upButton.onclick = () => {
+  imgUrlPosition += 1;
+  if (imgUrlPosition > 3) {
+    imgUrlPosition = 0;
+  }
+  let src = getImgSrc(id);
+  changeImgSrc(src);
+}
+
+downButton.onclick = () => {
+  imgUrlPosition -= 1;
+  if (imgUrlPosition < 0) {
+    imgUrlPosition = 3;
+  }
+  let src = getImgSrc(id);
+  changeImgSrc(src);
+}
+ 
 async function searchByName(name) {
   let search = `https://pokeapi.co/api/v2/pokemon/${name}`;
   let response = await fetch(search);
@@ -65,7 +87,7 @@ async function searchByName(name) {
 
 
 function getImgSrc(id) {
-  let newImgSrc = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
+  let newImgSrc = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/${imgUrlArray[imgUrlPosition]}${id}.png`;
   return newImgSrc;
 }
 
