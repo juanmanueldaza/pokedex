@@ -23,6 +23,10 @@ async function changePokemonPicture() {
   changeImgSrc(src);
 }
 
+async function playPokemonCry() {
+  new Audio("https://play.pokemonshowdown.com/audio/cries/pikachu.mp3").play();
+}
+
 function getImgSrc(id) {
   let newImgSrc = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/${imgUrlArray[imgUrlPosition]}${id}.png`;
   return newImgSrc;

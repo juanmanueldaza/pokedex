@@ -12,6 +12,8 @@ let backwardButton = document.getElementById("d_pad_left");
 let upButton = document.getElementById("d_pad_up");
 let downButton = document.getElementById("d_pad_down");
 
+let cryButton = document.getElementById("_317981776");
+
 let data;
 let id;
 let name;

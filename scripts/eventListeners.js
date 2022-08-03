@@ -41,6 +41,11 @@ downButton.onclick = () => {
   changePokemonPicture();
 };
 
+//////////////////////////////////////////////// CRY
+cryButton.onclick = () => {
+  playPokemonCry();
+};
+
 window.onkeydown = (e) => {
   if (e.keyCode === 37) {
     backwardButton.onclick();
