@@ -24,7 +24,7 @@ async function changePokemonPicture() {
 }
 
 async function playPokemonCry() {
-  new Audio("https://play.pokemonshowdown.com/audio/cries/pikachu.mp3").play();
+  new Audio(`https://play.pokemonshowdown.com/audio/cries/${name}.mp3`).play();
 }
 
 function getImgSrc(id) {

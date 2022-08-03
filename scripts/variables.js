@@ -16,7 +16,7 @@ let cryButton = document.getElementById("_317981776");
 
 let data;
 let id;
-let name;
+let pokemonName;
 
 let imgUrlArray = [
   "pokemon/",
