@@ -45,6 +45,11 @@ input {
   filter:invert()
 }
 
+#d_pad:active {
+  transform-origin: 415px 625px;
+  transform: scale(95%)
+}
+
 #main_light_blue_button:hover, #primary_screen_red_button:hover {
   filter: saturate(200%) hue-rotate(-10deg);
 }
