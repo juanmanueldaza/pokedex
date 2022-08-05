@@ -10,6 +10,7 @@
   border-radius: 10%;
   width: 100%;
   z-index: -1;
+  user-select: none;
 }
 
 #svg {
@@ -37,12 +38,21 @@ input {
 #pokeName {
   font-size: 35px;
   color: white;
+  user-select: none;
 }
 
 #d_pad_left:hover, #d_pad_right:hover, #d_pad_up:hover, #d_pad_down:hover {
-  fill:aqua;
+  filter:invert()
 }
 
-#_317605376:hover {
-  fill: yellow;
+#main_light_blue_button:hover, #primary_screen_red_button:hover {
+  filter: saturate(200%) hue-rotate(-10deg);
+}
+
+#main_light_blue_button:active, #primary_screen_red_button:active {
+  transform: translate(2px, 2px);
+}
+
+#secondary_screen_glow, #tertiary_screen_glow, #primary_screen_glow {
+  filter:opacity(55%)
 }
