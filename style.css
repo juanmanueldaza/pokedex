@@ -66,6 +66,20 @@ input {
   animation: shake 0.5s;
 }
 
+#led_red_main {
+  animation: lightup 1s;
+}
+
+#led_yellow_main {
+  animation: lightup 1s;
+  animation-delay: 0.3s;
+}
+
+#led_green_main {
+  animation: lightup 1s;
+  animation-delay: 0.6s;
+}
+
 @keyframes shake {
   0% { transform: translate(1px, 1px) }
   10% { transform: translate(-1px, -1px)  }
@@ -78,4 +92,9 @@ input {
   80% { transform: translate(-1px, -1px) }
   90% { transform: translate(1px, 1px) }
   100% { transform: translate(1px, -2px)  }
+}
+
+@keyframes lightup {
+  0% { filter:brightness(100%) }
+  100% { filter: brightness(150%);}
 }
