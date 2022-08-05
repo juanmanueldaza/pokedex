@@ -61,3 +61,22 @@ input {
 #secondary_screen_glow, #tertiary_screen_glow, #primary_screen_glow, #small_screen_one_glow, #small_screen_two_glow {
   filter:opacity(55%)
 }
+
+#primary_screen_red_button:active ~ #speaker {
+  animation: shake 0.5s;
+  animation-iteration-count: 4;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) }
+  10% { transform: translate(-1px, -1px)  }
+  20% { transform: translate(-1px, 0px) }
+  30% { transform: translate(1px, 1px) }
+  40% { transform: translate(1px, -1px) }
+  50% { transform: translate(-1px, 2px)  }
+  60% { transform: translate(-1px, 1px) }
+  70% { transform: translate(1px, 1px)  }
+  80% { transform: translate(-1px, -1px) }
+  90% { transform: translate(1px, 1px) }
+  100% { transform: translate(1px, -2px)  }
+}
