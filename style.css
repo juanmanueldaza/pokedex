@@ -58,6 +58,6 @@ input {
   transform: translate(2px, 2px);
 }
 
-#secondary_screen_glow, #tertiary_screen_glow, #primary_screen_glow {
+#secondary_screen_glow, #tertiary_screen_glow, #primary_screen_glow, #small_screen_one_glow, #small_screen_two_glow {
   filter:opacity(55%)
 }
