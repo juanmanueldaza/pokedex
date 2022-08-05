@@ -13,6 +13,7 @@ let upButton = document.getElementById("d_pad_up");
 let downButton = document.getElementById("d_pad_down");
 
 let cryButton = document.getElementById("primary_screen_red_button");
+let speaker = document.getElementById("speaker");
 
 let data;
 let id;

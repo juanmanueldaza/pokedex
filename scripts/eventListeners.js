@@ -46,7 +46,12 @@ downButton.onclick = () => {
 //////////////////////////////////////////////// CRY
 cryButton.onclick = () => {
   playPokemonCry();
+  speaker.classList.add('shake');
 };
+
+speaker.addEventListener('animationend', function() {
+  speaker.classList.remove('shake');
+});
 
 window.onkeydown = (e) => {
   if (e.keyCode === 37) {

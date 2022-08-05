@@ -62,9 +62,8 @@ input {
   filter:opacity(55%)
 }
 
-#primary_screen_red_button:active ~ #speaker {
+.shake {
   animation: shake 0.5s;
-  animation-iteration-count: 4;
 }
 
 @keyframes shake {
