@@ -16,11 +16,13 @@ searchInput.onkeydown = (e) => {
 forwardButton.onclick = async () => {
   id += 1;
   await changePokemon();
+  searchButton.onclick();
 };
 //////////////////////////////////////////////// BACKWARD
 backwardButton.onclick = async () => {
   id -= 1;
   await changePokemon();
+  searchButton.onclick();
 };
 
 //////////////////////////////////////////////// UP
