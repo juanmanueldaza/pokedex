@@ -6,6 +6,10 @@
   font-family: 'Press Start 2P', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+  background-image: url(/assets/bg.png);
+}
+
 #pokeImg{
   border-radius: 10%;
   width: 100%;
