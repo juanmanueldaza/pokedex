@@ -69,7 +69,7 @@ input {
 }
 
 .shake {
-  animation: shake 0.5s;
+  animation: shake 0.5s linear 0s 2;
 }
 
 #led_red_main {
