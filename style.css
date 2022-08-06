@@ -60,11 +60,11 @@ input {
   transform: scale(95%)
 }
 
-#main_light_blue_button:hover, #primary_screen_red_button:hover {
+#main_light_blue_button:hover, #primary_screen_red_button:hover, #main_big_led:hover {
   filter: saturate(200%) hue-rotate(-10deg);
 }
 
-#main_light_blue_button:active, #primary_screen_red_button:active {
+#main_light_blue_button:active, #primary_screen_red_button:active, #main_big_led:active {
   transform: translate(2px, 2px);
 }
 

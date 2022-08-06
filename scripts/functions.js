@@ -39,3 +39,7 @@ function changeImgSrc(src) {
 function changeName(name) {
   nameTitle.innerHTML = name.charAt(0).toUpperCase() + name.slice(1);
 }
+
+function randomIntFromInterval() { // min and max included 
+  return Math.floor(Math.random() * (898 - 1 + 1) + 1)
+}

@@ -49,9 +49,22 @@ cryButton.onclick = () => {
   speaker.classList.add('shake');
 };
 
+//////////////////////////////////////////////// SPEAKER ANIMATION
 speaker.addEventListener('animationend', function() {
   speaker.classList.remove('shake');
 });
+
+//////////////////////////////////////////////// RANDOM POKEMON
+mainBigLed.onclick = async () => {
+  randomPokemon = randomIntFromInterval();
+  data = await searchByName(randomPokemon.toString());
+  let src = getImgSrc(data.id);
+  id = data.id;
+  name = data.name;
+  searchInput.value = name;
+  changeImgSrc(src);
+  changeName(data.name);
+}
 
 window.onkeydown = (e) => {
   if (e.keyCode === 37) {
