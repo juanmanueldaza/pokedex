@@ -26,6 +26,7 @@ input {
   outline: none;
   border: none;
   background: none;
+  animation: blink 0.5s linear 0s 3;
 }
 
 #pokeNameContainer {
@@ -97,4 +98,10 @@ input {
 @keyframes lightup {
   0% { filter:brightness(100%) }
   100% { filter: brightness(150%);}
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
