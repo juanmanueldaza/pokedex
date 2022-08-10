@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Press Start 2P", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-user-drag: none;
 }
 
 body {
@@ -28,25 +29,29 @@ main {
 #svg {
   display: flex;
   width: 50vw;
-
   justify-content: center;
   align-items: center;
 }
 
-#inputForeign {
-  width: 100%;
+.inputContainer {
   height: 100%;
 }
 
 input {
+  width: 100%;
+  text-align: center;
   font-size: 22px;
   color: #323232;
   outline: none;
-
   background: none;
+  border: none;
   animation: blink 0.5s linear 0s 3;
   animation-delay: 1.5s;
   height: 100%;
+}
+
+#secondary_screen_glow {
+  pointer-events: none;
 }
 
 ::placeholder {
