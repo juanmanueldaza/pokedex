@@ -33,14 +33,20 @@ main {
   align-items: center;
 }
 
+#inputForeign {
+  width: 100%;
+  height: 100%;
+}
+
 input {
   font-size: 22px;
   color: #323232;
   outline: none;
-  border: none;
+
   background: none;
   animation: blink 0.5s linear 0s 3;
   animation-delay: 1.5s;
+  height: 100%;
 }
 
 ::placeholder {
@@ -90,6 +96,10 @@ input {
 #small_screen_one_glow,
 #small_screen_two_glow {
   filter: opacity(55%);
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 .shake {
