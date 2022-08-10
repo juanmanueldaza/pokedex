@@ -187,3 +187,9 @@ input {
     width: 50vw;
   }
 }
+
+@media screen and (orientation: portrait) {
+  #svg {
+    width: 100vw;
+  }
+}
