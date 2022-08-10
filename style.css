@@ -19,13 +19,18 @@ body {
 }
 
 main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #svg {
   display: flex;
+  width: 50vw;
+
   justify-content: center;
   align-items: center;
-  border: 3px solid #000;
 }
 
 input {
@@ -162,5 +167,23 @@ input {
 @keyframes blink {
   50% {
     opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #svg {
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #svg {
+    width: 75vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #svg {
+    width: 50vw;
   }
 }
