@@ -15,12 +15,20 @@ searchInput.onkeydown = (e) => {
 //////////////////////////////////////////////// FORWARD
 forwardButton.onclick = async () => {
   id += 1;
+  imgUrlPosition = 0;
+  if (id > 898) {
+    id = 1;
+  }
   await changePokemon();
   searchButton.onclick();
 };
 //////////////////////////////////////////////// BACKWARD
 backwardButton.onclick = async () => {
   id -= 1;
+  imgUrlPosition = 0;
+  if (id < 1) {
+    id = 898;
+  }
   await changePokemon();
   searchButton.onclick();
 };
@@ -46,12 +54,12 @@ downButton.onclick = () => {
 //////////////////////////////////////////////// CRY
 cryButton.onclick = () => {
   playPokemonCry();
-  speaker.classList.add('shake');
+  speaker.classList.add("shake");
 };
 
 //////////////////////////////////////////////// SPEAKER ANIMATION
-speaker.addEventListener('animationend', function() {
-  speaker.classList.remove('shake');
+speaker.addEventListener("animationend", function () {
+  speaker.classList.remove("shake");
 });
 
 //////////////////////////////////////////////// RANDOM POKEMON
@@ -64,7 +72,7 @@ mainBigLed.onclick = async () => {
   searchInput.value = name;
   changeImgSrc(src);
   changeName(data.name);
-}
+};
 
 window.onkeydown = (e) => {
   if (e.keyCode === 37) {
