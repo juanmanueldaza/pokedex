@@ -1,10 +1,15 @@
 async function handleSearchButton(e) {
   data = await getPokemon(input.value.toLowerCase());
-  let src = getImgSrc(data.id);
   id = data.id;
   name = data.name;
-  changeImgSrc(src);
-  changeName(data.name);
+  displayPokemon();
+}
+
+async function handleMainBigLed() {
+  data = await getPokemon(randomIntFromInterval());
+  id = data.id;
+  name = data.name;
+  displayPokemon();
 }
 
 async function handleForwardButton(e) {
@@ -13,8 +18,7 @@ async function handleForwardButton(e) {
   if (id > 898) {
     id = 1;
   }
-  await changePokemon();
-  searchButton.onclick();
+  displayPokemon();
 }
 
 async function handleBackwardButton(e) {
@@ -23,8 +27,7 @@ async function handleBackwardButton(e) {
   if (id < 1) {
     id = 898;
   }
-  await changePokemon();
-  searchButton.onclick();
+  displayPokemon();
 }
 
 function handleUpButton(e) {
@@ -46,13 +49,4 @@ function handleDownButton(e) {
 function handleCryButton() {
   playPokemonCry();
   speaker.classList.add("shake");
-}
-
-async function handleMainBigLed() {
-  data = await getPokemon(randomIntFromInterval());
-  let src = getImgSrc(data.id);
-  id = data.id;
-  name = data.name;
-  changeImgSrc(src);
-  changeName(data.name);
 }
