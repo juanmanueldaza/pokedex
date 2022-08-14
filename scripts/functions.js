@@ -13,7 +13,7 @@ function displayPokemon() {
   pokeId = data.id;
   input.value = pokeId;
   pokeName = data.name;
-  changePokemonPicture();
+  changeSprite();
   changeName(pokeName);
 }
 
@@ -22,7 +22,16 @@ async function changePokemonPicture() {
   changeImgSrc(src);
 }
 
-function changeSprite(imgUrlPosition) {}
+function getSprites() {
+  let availableSprites = getAvalaibleSprites(data);
+  spriteAmount = availableSprites.length;
+  spriteKey = availableSprites[spritePosition];
+}
+
+function changeSprite() {
+  spriteSrc = data.sprites[spriteKey];
+  changeImgSrc(spriteSrc);
+}
 
 async function playPokemonCry() {
   new Audio(
