@@ -9,16 +9,23 @@ async function handleRandom() {
 }
 
 async function handleForwardButton() {
+  if (!pokeId) {
+    pokeId = 0;
+  }
   pokeId += 1;
   imgUrlPosition = 0;
   if (pokeId > 898) {
     pokeId = 1;
   }
   input.value = pokeId;
+
   handleSearchButton();
 }
 
 async function handleBackwardButton() {
+  if (!pokeId) {
+    pokeId = 898;
+  }
   pokeId -= 1;
   imgUrlPosition = 0;
   if (pokeId < 1) {
