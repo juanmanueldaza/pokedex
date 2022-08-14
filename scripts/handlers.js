@@ -37,18 +37,20 @@ async function handleBackwardButton() {
 
 function handleUpButton() {
   spritePosition -= 1;
-  let availableSprites = getAvalaibleSprites(data);
-  spriteAmount = availableSprites.length;
   if (spritePosition < 0) {
     spritePosition = spriteAmount - 1;
   }
-  let spriteKey = availableSprites[spritePosition];
-  let spriteSrc = data.sprites[spriteKey];
-  changeImgSrc(spriteSrc);
+  getSprites();
+  changeSprite();
 }
 
 function handleDownButton() {
-  imgUrlArray = data.sprites;
+  spritePosition += 1;
+  if (spritePosition > spriteAmount - 1) {
+    spritePosition = 0;
+  }
+  getSprites();
+  changeSprite();
 }
 
 function handleCryButton() {

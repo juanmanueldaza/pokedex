@@ -29,5 +29,7 @@ let imgUrlArray = [
   "pokemon/back/shiny/",
 ];
 let imgUrlPosition = 0;
-let spritePosition = 0;
+let spritePosition = 2;
+let spriteKey;
+let spriteSrc;
 let spriteAmount;
