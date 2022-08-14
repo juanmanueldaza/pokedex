@@ -36,12 +36,9 @@ async function handleBackwardButton() {
 }
 
 function handleUpButton() {
-  imgUrlArray = data.sprites;
-  imgUrlPosition += 1;
-  if (imgUrlPosition > imgUrlArrayLength) {
-    imgUrlPosition = 0;
-  }
-  changeSprite(imgUrlPosition);
+  let availableSprites = getAvalaibleSprites(data);
+  let currentSprite = availableSprites[imgUrlPosition];
+  changeSprite(availableSprites);
 }
 
 function handleDownButton() {

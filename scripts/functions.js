@@ -22,9 +22,7 @@ async function changePokemonPicture() {
   changeImgSrc(src);
 }
 
-function changeSprite(imgUrlPosition) {
-  Object.values(imgUrlArray);
-}
+function changeSprite(imgUrlPosition) {}
 
 async function playPokemonCry() {
   new Audio(

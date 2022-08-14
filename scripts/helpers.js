@@ -9,7 +9,6 @@ function getImgSrcFromData(data) {
 }
 
 function getAvalaibleSprites(data) {
-  let sprites = [];
   let spriteKeys = [];
   Object.keys(data.sprites).forEach((key) => {
     if (key === "other" || key === "versions") {
@@ -18,8 +17,7 @@ function getAvalaibleSprites(data) {
       spriteKeys.push(key);
     }
   });
-  console.log(spriteKeys);
-  console.log(typeof spriteKeys);
+  return spriteKeys;
 }
 
 function changeImgSrc(src) {
