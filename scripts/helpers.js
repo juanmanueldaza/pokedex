@@ -3,6 +3,25 @@ function getImgSrc(id) {
   return newImgSrc;
 }
 
+function getImgSrcFromData(data) {
+  let newImgSrc = data.sprites.front_default;
+  return newImgSrc;
+}
+
+function getAvalaibleSprites(data) {
+  let sprites = [];
+  let spriteKeys = [];
+  Object.keys(data.sprites).forEach((key) => {
+    if (key === "other" || key === "versions") {
+      return;
+    } else if (data.sprites[key] !== null) {
+      spriteKeys.push(key);
+    }
+  });
+  console.log(spriteKeys);
+  console.log(typeof spriteKeys);
+}
+
 function changeImgSrc(src) {
   image.src = src;
 }

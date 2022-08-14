@@ -22,6 +22,10 @@ async function changePokemonPicture() {
   changeImgSrc(src);
 }
 
+function changeSprite(imgUrlPosition) {
+  Object.values(imgUrlArray);
+}
+
 async function playPokemonCry() {
   new Audio(
     `https://play.pokemonshowdown.com/audio/cries/${pokeName}.mp3`

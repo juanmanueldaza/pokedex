@@ -36,19 +36,16 @@ async function handleBackwardButton() {
 }
 
 function handleUpButton() {
+  imgUrlArray = data.sprites;
   imgUrlPosition += 1;
-  if (imgUrlPosition > 3) {
+  if (imgUrlPosition > imgUrlArrayLength) {
     imgUrlPosition = 0;
   }
-  changePokemonPicture();
+  changeSprite(imgUrlPosition);
 }
 
 function handleDownButton() {
-  imgUrlPosition -= 1;
-  if (imgUrlPosition < 0) {
-    imgUrlPosition = 3;
-  }
-  changePokemonPicture();
+  imgUrlArray = data.sprites;
 }
 
 function handleCryButton() {
