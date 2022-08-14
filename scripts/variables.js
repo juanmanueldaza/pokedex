@@ -17,10 +17,9 @@ let mainBigLed = document.getElementById("main_big_led");
 
 let speaker = document.getElementById("speaker");
 
-
 let data;
-let id;
-let pokemonName;
+let pokeId;
+let pokeName;
 let randomPokemon;
 
 let imgUrlArray = [
