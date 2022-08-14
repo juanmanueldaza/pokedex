@@ -1,36 +1,34 @@
-async function handleSearchButton(e) {
+async function handleSearchButton() {
   data = await getPokemon(input.value.toLowerCase());
-  id = data.id;
-  name = data.name;
   displayPokemon();
 }
 
-async function handleMainBigLed() {
+async function handleRandom() {
   data = await getPokemon(randomIntFromInterval());
-  id = data.id;
-  name = data.name;
   displayPokemon();
 }
 
-async function handleForwardButton(e) {
-  id += 1;
+async function handleForwardButton() {
+  pokeId += 1;
   imgUrlPosition = 0;
-  if (id > 898) {
-    id = 1;
+  if (pokeId > 898) {
+    pokeId = 1;
   }
-  displayPokemon();
+  input.value = pokeId;
+  handleSearchButton();
 }
 
-async function handleBackwardButton(e) {
-  id -= 1;
+async function handleBackwardButton() {
+  pokeId -= 1;
   imgUrlPosition = 0;
-  if (id < 1) {
-    id = 898;
+  if (pokeId < 1) {
+    pokeId = 898;
   }
-  displayPokemon();
+  input.value = pokeId;
+  handleSearchButton();
 }
 
-function handleUpButton(e) {
+function handleUpButton() {
   imgUrlPosition += 1;
   if (imgUrlPosition > 3) {
     imgUrlPosition = 0;
@@ -38,7 +36,7 @@ function handleUpButton(e) {
   changePokemonPicture();
 }
 
-function handleDownButton(e) {
+function handleDownButton() {
   imgUrlPosition -= 1;
   if (imgUrlPosition < 0) {
     imgUrlPosition = 3;

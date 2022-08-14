@@ -8,22 +8,22 @@ searchInput.onkeydown = (e) => {
   }
 };
 //////////////////////////////////////////////// FORWARD
-forwardButton.onclick = async (e) => {
-  handleBackwardButton(e);
+forwardButton.onclick = async () => {
+  handleForwardButton();
 };
 //////////////////////////////////////////////// BACKWARD
-backwardButton.onclick = async (e) => {
-  handleForwardButton(e);
+backwardButton.onclick = async () => {
+  handleBackwardButton();
 };
 
 //////////////////////////////////////////////// UP
-upButton.onclick = (e) => {
-  handleUpButton(e);
+upButton.onclick = () => {
+  handleUpButton();
 };
 
 //////////////////////////////////////////////// DOWN
-downButton.onclick = (e) => {
-  handleDownButton(e);
+downButton.onclick = () => {
+  handleDownButton();
 };
 
 //////////////////////////////////////////////// CRY
@@ -38,7 +38,7 @@ speaker.onanimationend = () => {
 
 //////////////////////////////////////////////// RANDOM POKEMON
 mainBigLed.onclick = async () => {
-  await handleMainBigLed();
+  await handleRandom();
 };
 
 window.onkeydown = (e) => {

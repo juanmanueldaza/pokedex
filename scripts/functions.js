@@ -10,41 +10,20 @@ async function getPokemon(nameOrId) {
 }
 
 function displayPokemon() {
-  let src = getImgSrc(id);
-  changeImgSrc(src);
-  changeName(name);
-  input.value = id;
-}
-
-async function changePokemon() {
-  let src = getImgSrc(id);
-  changeImgSrc(src);
-  changeName(name);
-  input.value = id;
+  pokeId = data.id;
+  input.value = pokeId;
+  pokeName = data.name;
+  changePokemonPicture();
+  changeName(pokeName);
 }
 
 async function changePokemonPicture() {
-  let src = getImgSrc(id);
+  let src = getImgSrc(pokeId);
   changeImgSrc(src);
 }
 
 async function playPokemonCry() {
-  new Audio(`https://play.pokemonshowdown.com/audio/cries/${name}.mp3`).play();
-}
-
-function getImgSrc(id) {
-  let newImgSrc = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/${imgUrlArray[imgUrlPosition]}${id}.png`;
-  return newImgSrc;
-}
-
-function changeImgSrc(src) {
-  image.src = src;
-}
-
-function changeName(name) {
-  nameTitle.innerHTML = name.charAt(0).toUpperCase() + name.slice(1);
-}
-
-function randomIntFromInterval() {
-  return Math.floor(Math.random() * (898 - 1 + 1) + 1);
+  new Audio(
+    `https://play.pokemonshowdown.com/audio/cries/${pokeName}.mp3`
+  ).play();
 }
