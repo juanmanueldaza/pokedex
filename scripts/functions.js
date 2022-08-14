@@ -13,6 +13,7 @@ function displayPokemon() {
   pokeId = data.id;
   input.value = pokeId;
   pokeName = data.name;
+  getSprites();
   changeSprite();
   changeName(pokeName);
 }
@@ -30,6 +31,7 @@ function getSprites() {
 
 function changeSprite() {
   spriteSrc = data.sprites[spriteKey];
+  console.log(spriteKey);
   changeImgSrc(spriteSrc);
 }
 

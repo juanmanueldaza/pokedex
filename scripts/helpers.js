@@ -17,7 +17,20 @@ function getAvalaibleSprites(data) {
       spriteKeys.push(key);
     }
   });
-  return spriteKeys;
+  return orderSpriteKeys(spriteKeys);
+}
+
+function orderSpriteKeys(spriteKeys) {
+  let orderedSpriteKeys = [];
+  spriteKeys.map((key) => {
+    if (key !== "front_default") {
+      orderedSpriteKeys.push(key);
+    } else {
+      orderedSpriteKeys.unshift(key);
+    }
+  });
+  console.log(orderedSpriteKeys);
+  return orderedSpriteKeys;
 }
 
 function changeImgSrc(src) {

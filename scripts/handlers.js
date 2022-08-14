@@ -1,9 +1,11 @@
 async function handleSearchButton() {
+  spritePosition = 0;
   data = await getPokemon(input.value.toLowerCase());
   displayPokemon();
 }
 
 async function handleRandom() {
+  spritePosition = 0;
   data = await getPokemon(randomIntFromInterval());
   displayPokemon();
 }
@@ -13,7 +15,7 @@ async function handleForwardButton() {
     pokeId = 0;
   }
   pokeId += 1;
-  imgUrlPosition = 0;
+  spritePosition = 0;
   if (pokeId > 898) {
     pokeId = 1;
   }
@@ -27,7 +29,7 @@ async function handleBackwardButton() {
     pokeId = 898;
   }
   pokeId -= 1;
-  imgUrlPosition = 0;
+  spritePosition = 0;
   if (pokeId < 1) {
     pokeId = 898;
   }
@@ -40,8 +42,7 @@ function handleUpButton() {
   if (spritePosition < 0) {
     spritePosition = spriteAmount - 1;
   }
-  getSprites();
-  changeSprite();
+  displayPokemon();
 }
 
 function handleDownButton() {
@@ -49,8 +50,7 @@ function handleDownButton() {
   if (spritePosition > spriteAmount - 1) {
     spritePosition = 0;
   }
-  getSprites();
-  changeSprite();
+  displayPokemon();
 }
 
 function handleCryButton() {
