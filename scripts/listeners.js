@@ -1,5 +1,4 @@
 window.onload = async () => {
-  //////////////////////////////////////////////// SEARCH
   searchButton.onclick = async (e) => {
     await handleSearchButton(e);
   };
@@ -8,40 +7,29 @@ window.onload = async () => {
       searchButton.onclick();
     }
   };
-  //////////////////////////////////////////////// FORWARD
   forwardButton.onclick = async () => {
     handleForwardButton();
   };
-  //////////////////////////////////////////////// BACKWARD
   backwardButton.onclick = async () => {
     handleBackwardButton();
   };
 
-  //////////////////////////////////////////////// UP
   upButton.onclick = () => {
     handleUpButton();
   };
-
-  //////////////////////////////////////////////// DOWN
   downButton.onclick = () => {
     handleDownButton();
   };
 
-  //////////////////////////////////////////////// CRY
   cryButton.onclick = () => {
     handleCryButton();
   };
-
-  //////////////////////////////////////////////// SPEAKER ANIMATION
   speaker.onanimationend = () => {
     speaker.classList.remove("shake");
   };
-
-  //////////////////////////////////////////////// RANDOM POKEMON
   mainBigLed.onclick = async () => {
     await handleRandom();
   };
-
   window.onkeydown = (e) => {
     if (e.keyCode === 37) {
       backwardButton.onclick();
