@@ -16,6 +16,7 @@ function displayPokemon() {
   getSprites();
   changeSprite();
   changeName(pokeName);
+  changeGender(spriteKey);
 }
 
 async function changePokemonPicture() {
@@ -24,7 +25,7 @@ async function changePokemonPicture() {
 }
 
 function getSprites() {
-  let availableSprites = getAvalaibleSprites(data);
+  availableSprites = getAvalaibleSprites(data);
   spriteAmount = availableSprites.length;
   spriteKey = availableSprites[spritePosition];
 }
