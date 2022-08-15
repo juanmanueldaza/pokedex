@@ -40,6 +40,14 @@ function changeName(name) {
   nameTitle.innerHTML = name.charAt(0).toUpperCase() + name.slice(1);
 }
 
+function changeGender(spriteKey) {
+  if (spriteKey.includes ("female")) {
+    pokeGender.innerHTML = "female";
+  } else {
+    pokeGender.innerHTML = "male";
+  }
+}
+
 function randomIntFromInterval() {
   return Math.floor(Math.random() * (898 - 1 + 1) + 1);
 }

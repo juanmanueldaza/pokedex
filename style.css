@@ -71,6 +71,20 @@ input {
   user-select: none;
 }
 
+#pokeGenderContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#pokeGender {
+  font-size: 17px;
+  font-weight: normal;
+  color: white;
+  user-select: none;
+}
+
 #d_pad_left:hover,
 #d_pad_right:hover,
 #d_pad_up:hover,
