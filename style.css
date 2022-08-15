@@ -58,31 +58,29 @@ input {
   color: #323232;
 }
 
-#pokeNameContainer {
+#pokeNameContainer, #pokeGenderContainer, #pokeTypesContainer {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#pokeName {
+#pokeName, #pokeGender, #pokeTypes {
   font-size: 35px;
   color: white;
   user-select: none;
 }
 
-#pokeGenderContainer {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#pokeTypesContainer {
+  text-align: center;
 }
 
-#pokeGender {
+#pokeGender, #pokeTypes {
   font-size: 17px;
-  font-weight: normal;
-  color: white;
-  user-select: none;
+}
+
+#pokeTypes {
+  font-size: 12px;
 }
 
 #d_pad_left:hover,

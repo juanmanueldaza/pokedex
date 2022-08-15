@@ -3,6 +3,7 @@ let searchButton = document.getElementById("main_light_blue_button");
 let image = document.getElementById("pokeImg");
 let nameTitle = document.getElementById("pokeName");
 let pokeGender = document.getElementById("pokeGender");
+let pokeTypes = document.getElementById("pokeTypes");
 let forwardButton = document.getElementById("d_pad_right");
 let backwardButton = document.getElementById("d_pad_left");
 let upButton = document.getElementById("d_pad_up");
