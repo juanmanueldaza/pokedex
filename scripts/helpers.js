@@ -48,6 +48,14 @@ function changeGender(spriteKey) {
   }
 }
 
+function changeTypes(typesArray) {
+  if (typesArray.length > 1) {
+    pokeTypes.innerHTML = typesArray[0].type.name + "<br>" + typesArray[1].type.name;
+  } else {
+    pokeTypes.innerHTML = typesArray[0].type.name;
+  }
+}
+
 function randomIntFromInterval() {
   return Math.floor(Math.random() * (898 - 1 + 1) + 1);
 }
