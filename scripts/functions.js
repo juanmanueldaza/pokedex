@@ -31,7 +31,6 @@ function getSprites() {
 
 function changeSprite() {
   spriteSrc = data.sprites[spriteKey];
-  console.log(spriteKey);
   changeImgSrc(spriteSrc);
 }
 

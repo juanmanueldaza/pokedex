@@ -29,7 +29,6 @@ function orderSpriteKeys(spriteKeys) {
       orderedSpriteKeys.unshift(key);
     }
   });
-  console.log(orderedSpriteKeys);
   return orderedSpriteKeys;
 }
 
