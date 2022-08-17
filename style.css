@@ -63,16 +63,13 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center
 }
 
 #pokeName, #pokeGender, #pokeTypes {
   font-size: 35px;
   color: white;
   user-select: none;
-}
-
-#pokeTypesContainer {
-  text-align: center;
 }
 
 #pokeGender, #pokeTypes {

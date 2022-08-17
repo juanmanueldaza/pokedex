@@ -37,7 +37,12 @@ function changeImgSrc(src) {
 }
 
 function changeName(name) {
-  nameTitle.innerHTML = name.charAt(0).toUpperCase() + name.slice(1);
+  if (spriteKey.includes ("shiny")) {
+    let shiny = "(shiny)"
+    nameTitle.innerHTML = name.charAt(0).toUpperCase() + name.slice(1) + "<br>" + shiny.fontsize(4);
+  } else {
+    nameTitle.innerHTML = name.charAt(0).toUpperCase() + name.slice(1);
+  }
 }
 
 function changeGender(spriteKey) {
