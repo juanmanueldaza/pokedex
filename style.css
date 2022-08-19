@@ -110,6 +110,7 @@ input {
 #small_screen_one_glow,
 #small_screen_two_glow {
   filter: opacity(55%);
+  animation: glowMotion 3s ease-out 0s 1;
 }
 
 .pointer {
@@ -141,6 +142,15 @@ input {
 #led_green_input {
   animation: lightup 1s linear 0s infinite;
   animation-delay: 0.5s;
+}
+
+@keyframes glowMotion {
+  0% {
+    transform: translateX(-100px)
+  }
+  50% {
+    transform: translateX(0px);
+  }
 }
 
 @keyframes shake {
@@ -217,3 +227,4 @@ input {
     width: 100vw;
   }
 }
+
