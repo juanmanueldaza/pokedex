@@ -19,4 +19,6 @@ let spriteAmount;
 let data;
 let pokeId;
 let pokeName;
+let poketypeOne;
+let poketypeTwo;
 let randomPokemon;

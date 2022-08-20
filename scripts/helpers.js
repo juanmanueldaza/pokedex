@@ -55,9 +55,14 @@ function changeGender(spriteKey) {
 
 function changeTypes(typesArray) {
   if (typesArray.length > 1) {
-    pokeTypes.innerHTML = typesArray[0].type.name + "<br>" + typesArray[1].type.name;
+    poketypeOne = typesArray[0].type.name;
+    poketypeTwo = typesArray[1].type.name;
+    let doubleType = "doubleType";
+    pokeTypes.innerHTML = `<div class="${poketypeOne} ${doubleType}">${typesArray[0].type.name}</div><div class="${poketypeTwo} ${doubleType}">${typesArray[1].type.name}</div>`;
   } else {
+    poketypeOne = typesArray[0].type.name;
     pokeTypes.innerHTML = typesArray[0].type.name;
+    pokeTypes.classList.add(poketypeOne);
   }
 }
 
