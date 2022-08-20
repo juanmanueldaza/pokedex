@@ -73,11 +73,25 @@ input {
 }
 
 #pokeGender, #pokeTypes {
+  font-weight: 100;
   font-size: 17px;
 }
 
 #pokeTypes {
-  font-size: 12px;
+  padding: 0.2vw 0.2vw;
+  border-radius: 10%;
+  font-size: 11px;
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; */
+}
+
+.doubleType {
+  font-size: 9px !important;
+  margin: 0.1vw 0.1vw !important;
+  padding: 0vw 0.2vw !important;
+  border: white solid 1px !important;
 }
 
 #d_pad_left:hover,
@@ -109,7 +123,8 @@ input {
 #primary_screen_glow,
 #small_screen_one_glow,
 #small_screen_two_glow {
-  filter: opacity(55%);
+  filter: opacity(30%);
+  animation: glowMotion 3s ease-out 0s 1;
 }
 
 .pointer {
@@ -141,6 +156,111 @@ input {
 #led_green_input {
   animation: lightup 1s linear 0s infinite;
   animation-delay: 0.5s;
+}
+
+
+
+.bug {
+  border: white solid 2px;
+  background: #A0C888;
+}
+
+.dark {
+  border: white solid 2px;
+  background: #908888;
+}
+
+.dragon {
+  border: white solid 2px;
+  background: linear-gradient(180deg, #6898F8 50%, #F87070 50%);
+}
+
+.electric {
+  border: white solid 2px;
+  background: #E0E000;
+}
+
+.fairy {
+  border: white solid 2px;
+  background: #FFAAFF;
+}
+
+.fighting {
+  border: white solid 2px;
+  background: #F87070;
+}
+
+.fire {
+  border: white solid 2px;
+  background: orange;
+}
+
+.flying {
+  border: white solid 2px;
+  background: linear-gradient(180deg, #58C8F0 50%, #B8B8A8 50%);
+}
+
+.ghost {
+  border: white solid 2px;
+  background: #A870F8;
+}
+
+.grass {
+  border: white solid 2px;
+  background: #90E880;
+}
+
+.ground {
+  border: white solid 2px;
+  background: linear-gradient(180deg, #E0E000 50%, #C8A048 50%);
+}
+
+.ice { 
+  border: white solid 2px;
+  background: #30D8D0;
+}
+
+.normal {
+  border: white solid 2px;
+  background: #B8B8A8;
+}
+
+.poison {
+  border: white solid 2px;
+  background: #E090F8;
+}
+
+.psychic {
+  border: white solid 2px;
+  background: #F838A8;
+}
+
+.rock {
+  border: white solid 2px;
+  background: #C8A048;
+}
+
+.steel {
+  border: white solid 2px;
+  background: #B8B8D0;
+}
+
+.water {
+  border: white solid 2px;
+  background: #6898F8;
+}
+
+
+
+
+
+@keyframes glowMotion {
+  0% {
+    transform: translateX(-100px)
+  }
+  50% {
+    transform: translateX(0px);
+  }
 }
 
 @keyframes shake {
@@ -217,3 +337,4 @@ input {
     width: 100vw;
   }
 }
+

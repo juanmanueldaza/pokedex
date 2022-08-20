@@ -1,5 +1,7 @@
 async function handleSearchButton() {
   spritePosition = 0;
+  pokeTypes.classList.remove(poketypeOne);
+  pokeTypes.classList.remove(poketypeTwo);
   data = await getPokemon(input.value.toLowerCase());
   displayPokemon();
 }
