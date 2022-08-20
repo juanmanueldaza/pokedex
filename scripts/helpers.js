@@ -72,8 +72,8 @@ function changeTypes(typesArray) {
     pokeTypes.innerHTML = `<div class="${poketypeOne} ${doubleType}">${typesArray[0].type.name}</div><div class="${poketypeTwo} ${doubleType}">${typesArray[1].type.name}</div>`;
   } else {
     poketypeOne = typesArray[0].type.name;
-    pokeTypes.innerHTML = typesArray[0].type.name;
-    pokeTypes.classList.add(poketypeOne);
+    let singleType = "singleType";
+    pokeTypes.innerHTML = `<div class="${poketypeOne} ${singleType}">${typesArray[0].type.name}</div>`;
   }
 }
 
