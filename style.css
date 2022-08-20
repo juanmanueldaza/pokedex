@@ -73,16 +73,25 @@ input {
 }
 
 #pokeGender, #pokeTypes {
+  font-weight: 100;
   font-size: 17px;
 }
 
 #pokeTypes {
-  font-size: 12px;
+  padding: 0.2vw 0.2vw;
+  border-radius: 10%;
+  font-size: 11px;
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; */
 }
 
 .doubleType {
-  font-size: 12px;
-  padding: 0 !important;
+  font-size: 9px !important;
+  margin: 0.1vw 0.1vw !important;
+  padding: 0vw 0.2vw !important;
+  border: white solid 1px !important;
 }
 
 #d_pad_left:hover,
@@ -152,128 +161,92 @@ input {
 
 
 .bug {
-  padding: 0.3vw 0.4vw;
   border: white solid 2px;
-  border-radius: 10%;
   background: #A0C888;
 }
 
 .dark {
-  padding: 0.3vw 0.4vw;
   border: white solid 2px;
-  border-radius: 10%;
   background: #908888;
 }
 
 .dragon {
-  padding: 0.3vw 0.4vw;
   border: white solid 2px;
-  border-radius: 10%;
   background: linear-gradient(180deg, #6898F8 50%, #F87070 50%);
 }
 
 .electric {
-  padding: 0.3vw 0.4vw;
   border: white solid 2px;
-  border-radius: 10%;
   background: #E0E000;
 }
 
 .fairy {
-  padding: 0.3vw 0.4vw;
   border: white solid 2px;
-  border-radius: 10%;
   background: #FFAAFF;
 }
 
 .fighting {
-  padding: 0.3vw 0.4vw;
   border: white solid 2px;
-  border-radius: 10%;
   background: #F87070;
 }
 
 .fire {
-  padding: 0.3vw 0.4vw;
   border: white solid 2px;
-  border-radius: 10%;
   background: orange;
 }
 
 .flying {
-  padding: 0.3vw 0.4vw;
   border: white solid 2px;
-  border-radius: 10%;
   background: linear-gradient(180deg, #58C8F0 50%, #B8B8A8 50%);
 }
 
 .ghost {
-  padding: 0.3vw 0.4vw;
   border: white solid 2px;
-  border-radius: 10%;
   background: #A870F8;
 }
 
 .grass {
-  padding: 0.3vw 0.4vw;
   border: white solid 2px;
-  border-radius: 10%;
   background: #90E880;
 }
 
 .ground {
-  padding: 0.3vw 0.4vw;
   border: white solid 2px;
-  border-radius: 10%;
   background: linear-gradient(180deg, #E0E000 50%, #C8A048 50%);
 }
 
 .ice { 
-  padding: 0.3vw 0.4vw;
   border: white solid 2px;
-  border-radius: 10%;
   background: #30D8D0;
 }
 
 .normal {
-  padding: 0.3vw 0.4vw;
   border: white solid 2px;
-  border-radius: 10%;
   background: #B8B8A8;
 }
 
 .poison {
-  padding: 0.3vw 0.4vw;
   border: white solid 2px;
-  border-radius: 10%;
   background: #E090F8;
 }
 
 .psychic {
-  padding: 0.3vw 0.4vw;
   border: white solid 2px;
-  border-radius: 10%;
   background: #F838A8;
 }
 
 .rock {
-  padding: 0.3vw 0.4vw;
   border: white solid 2px;
-  border-radius: 10%;
   background: #C8A048;
 }
 
 .steel {
-  padding: 0.3vw 0.4vw;
   border: white solid 2px;
-  border-radius: 10%;
   background: #B8B8D0;
 }
 
 .water {
-  padding: 0.3vw 0.4vw;
   border: white solid 2px;
-  border-radius: 10%;
   background: #6898F8;
 }
 
