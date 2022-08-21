@@ -76,6 +76,14 @@ input {
   user-select: none;
 }
 
+#pokeName h3 {
+  font-size: 24px;
+}
+
+#pokeName p {
+  font-size: 18px;
+}
+
 #pokeGender {
   stroke: rgb(103, 103, 103);
   stroke-width: 1px;
@@ -114,7 +122,9 @@ input {
 #d_pad_left:hover,
 #d_pad_right:hover,
 #d_pad_up:hover,
-#d_pad_down:hover {
+#d_pad_down:hover,
+#secondary_left_arrow:hover,
+#secondary_right_arrow:hover {
   filter: invert();
 }
 
@@ -131,7 +141,9 @@ input {
 
 #main_light_blue_button:active,
 #primary_screen_red_button:active,
-#main_big_led:active {
+#main_big_led:active,
+#secondary_left_arrow:active,
+#secondary_right_arrow:active {
   transform: translate(2px, 2px);
 }
 

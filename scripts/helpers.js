@@ -20,6 +20,13 @@ function getAvalaibleSprites(data) {
   return orderSpriteKeys(spriteKeys);
 }
 
+function getStats(data) {
+  let statsKeys = [];
+  statsKeys.push(data.name, data.height, data.stats[0].base_stat, data.stats[1].base_stat, data.stats[2].base_stat, data.stats[5].base_stat)
+  
+  return(statsKeys);
+}
+
 function orderSpriteKeys(spriteKeys) {
   let orderedSpriteKeys = [];
   spriteKeys.map((key) => {
@@ -43,6 +50,7 @@ function changeName(name) {
   } else {
     nameTitle.innerHTML = name.charAt(0).toUpperCase() + name.slice(1);
   }
+  statsPosition = 0;
 }
 
 function changeGender(spriteKey) {

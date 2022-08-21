@@ -13,11 +13,13 @@ function displayPokemon() {
   pokeId = data.id;
   input.value = pokeId;
   pokeName = data.name;
+  pokemonStats = getStats(data)
   getSprites();
   changeSprite();
   changeName(pokeName);
   changeGender(spriteKey);
   changeTypes(data.types);
+  getStats();
 }
 
 async function changePokemonPicture() {
