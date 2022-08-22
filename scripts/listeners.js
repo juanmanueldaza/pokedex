@@ -1,57 +1,57 @@
 window.onload = async () => {
-  searchButton.onclick = async (e) => {
+  searchButton.onmousedown = async (e) => {
     await handleSearchButton(e);
   };
   searchInput.onkeydown = (e) => {
     if (e.keyCode === 13) {
-      searchButton.onclick();
+      searchButton.onmousedown();
     }
   };
-  forwardButton.onclick = async () => {
+  forwardButton.onmousedown = async () => {
     handleForwardButton();
   };
-  backwardButton.onclick = async () => {
+  backwardButton.onmousedown = async () => {
     handleBackwardButton();
   };
 
-  upButton.onclick = () => {
+  upButton.onmousedown = () => {
     handleUpButton();
   };
-  downButton.onclick = () => {
+  downButton.onmousedown = () => {
     handleDownButton();
   };
 
-  cryButton.onclick = () => {
+  cryButton.onmousedown = () => {
     handleCryButton();
   };
   speaker.onanimationend = () => {
     speaker.classList.remove("shake");
   };
-  mainBigLed.onclick = async () => {
+  mainBigLed.onmousedown = async () => {
     await handleRandom();
   };
-  secondaryLeftArrow.onclick = () => {
+  secondaryLeftArrow.onmousedown = () => {
     handleSecondaryLeftArrow();
-  }
-  secondaryRightArrow.onclick = () => {
+  };
+  secondaryRightArrow.onmousedown = () => {
     handleSecondaryRightArrow();
-  }
+  };
   window.onkeydown = (e) => {
     if (e.keyCode === 37) {
-      backwardButton.onclick();
+      backwardButton.onmousedown();
     } else if (e.keyCode === 39) {
-      forwardButton.onclick();
+      forwardButton.onmousedown();
     } else if (e.keyCode === 38) {
-      upButton.onclick();
+      upButton.onmousedown();
     } else if (e.keyCode === 40) {
-      downButton.onclick();
+      downButton.onmousedown();
     }
   };
   window.onmousewheel = (e) => {
     if (e.wheelDelta > 0) {
-      backwardButton.onclick();
+      backwardButton.onmousedown();
     } else {
-      forwardButton.onclick();
+      forwardButton.onmousedown();
     }
   };
 };
