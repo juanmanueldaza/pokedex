@@ -12,6 +12,18 @@ let downButton = document.getElementById("d_pad_down");
 let cryButton = document.getElementById("primary_screen_red_button");
 let mainBigLed = document.getElementById("main_big_led");
 let speaker = document.getElementById("speaker");
+let secondaryLeftArrow = document.getElementById("secondary_left_arrow");
+let secondaryRightArrow = document.getElementById("secondary_right_arrow");
+let pokemonStats;
+let statsKeys = [
+    "Name",
+    "Height",
+    "HP",
+    "Attack",
+    "Defense",
+    "Speed",
+    ];
+let statsPosition = 0;
 let spritePosition = 0;
 let availableSprites;
 let spriteKey;

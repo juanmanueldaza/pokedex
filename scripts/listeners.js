@@ -30,6 +30,12 @@ window.onload = async () => {
   mainBigLed.onclick = async () => {
     await handleRandom();
   };
+  secondaryLeftArrow.onclick = () => {
+    handleSecondaryLeftArrow();
+  }
+  secondaryRightArrow.onclick = () => {
+    handleSecondaryRightArrow();
+  }
   window.onkeydown = (e) => {
     if (e.keyCode === 37) {
       backwardButton.onclick();
