@@ -13,7 +13,7 @@ function displayPokemon() {
   pokeId = data.id;
   input.value = pokeId;
   pokeName = data.name;
-  pokemonStats = getStats(data)
+  pokemonStats = getStats(data);
   getSprites();
   changeSprite();
   changeName(pokeName);
@@ -42,4 +42,20 @@ async function playPokemonCry() {
   new Audio(
     `https://play.pokemonshowdown.com/audio/cries/${pokeName}.mp3`
   ).play();
+}
+
+function showGifLoadingAnimation() {
+  loadingAnimationImg.style.display = "block";
+}
+
+function hideGifLoadingAnimation() {
+  loadingAnimationImg.style.display = "none";
+}
+
+function hidePokemonImageForLoadingAnimation() {
+  image.style.display = "none";
+}
+
+function showPokemonImageForLoadingAnimation() {
+  image.style.display = "block";
 }

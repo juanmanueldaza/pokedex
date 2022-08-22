@@ -68,28 +68,12 @@ function handleCryButton() {
   speaker.classList.add("shake");
 }
 
-function showGifLoadingAnimation() {
-  loadingAnimationImg.style.display = "block";
-}
-
-function hideGifLoadingAnimation() {
-  loadingAnimationImg.style.display = "none";
-}
-
-function hidePokemonImageForLoadingAnimation() {
-  image.style.display = "none";
-}
-
-function showPokemonImageForLoadingAnimation() {
-  image.style.display = "block";
-}
-
 function handleSecondaryLeftArrow() {
   statsPosition -= 1;
   if (statsPosition < 0) {
     statsPosition = statsKeys.length - 1;
   }
-  if (statsPosition	=== 0) {
+  if (statsPosition === 0) {
     changeName(pokeName);
   } else {
     nameTitle.innerHTML = `<h3>${statsKeys[statsPosition]}</h3><br><p>${pokemonStats[statsPosition]}</p>`;
@@ -100,7 +84,7 @@ function handleSecondaryRightArrow() {
   statsPosition += 1;
   if (statsPosition > statsKeys.length - 1) {
     statsPosition = 0;
-    changeName(pokeName)
+    changeName(pokeName);
   } else {
     nameTitle.innerHTML = `<h3>${statsKeys[statsPosition]}</h3><br><p>${pokemonStats[statsPosition]}</p>`;
   }
