@@ -19,6 +19,10 @@ body {
   user-select: none;
 }
 
+#loadingGifAnimation {
+  display: none;
+}
+
 main {
   height: 100vh;
   display: flex;
@@ -66,32 +70,45 @@ input {
   text-align: center
 }
 
-#pokeName, #pokeGender, #pokeTypes {
+#pokeName {
   font-size: 35px;
   color: white;
   user-select: none;
 }
 
-#pokeGender, #pokeTypes {
-  font-weight: 100;
-  font-size: 17px;
+#pokeGender {
+  stroke: rgb(103, 103, 103);
+  stroke-width: 1px;
 }
 
 #pokeTypes {
-  padding: 0.2vw 0.2vw;
-  border-radius: 10%;
-  font-size: 11px;
+  font-weight: 100;
+  color: white;
+  user-select: none;
   /* display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center; */
 }
 
+.singleType {
+  font-size: 11px;
+  padding-left: 0.2vw;
+  padding-right: 0.2vw;
+  padding-top: 0.1vw;
+  padding-bottom: 0.1vw;
+  border-radius: 10%;
+  border: white solid 2px;
+  text-shadow: 2px 2px 2px rgb(32, 32, 32);
+}
+
 .doubleType {
-  font-size: 9px !important;
-  margin: 0.1vw 0.1vw !important;
-  padding: 0vw 0.2vw !important;
-  border: white solid 1px !important;
+  font-size: 9px;
+  margin-top: 3%;
+  padding: 2%;
+  border-radius: 10%;
+  border: white solid 1px;
+  text-shadow: 1px 1px 2px rgb(32, 32, 32);
 }
 
 #d_pad_left:hover,

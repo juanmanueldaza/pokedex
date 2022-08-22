@@ -1,15 +1,23 @@
 async function handleSearchButton() {
+  hidePokemonImageForLoadingAnimation();
+  showGifLoadingAnimation();
   spritePosition = 0;
   pokeTypes.classList.remove(poketypeOne);
   pokeTypes.classList.remove(poketypeTwo);
   data = await getPokemon(input.value.toLowerCase());
-  displayPokemon();
+  setTimeout(() => displayPokemon(), 2110);
+  setTimeout(() => hideGifLoadingAnimation(), 2110);
+  setTimeout(() => showPokemonImageForLoadingAnimation(), 2110);
 }
 
 async function handleRandom() {
+  hidePokemonImageForLoadingAnimation();
+  showGifLoadingAnimation();
   spritePosition = 0;
   data = await getPokemon(randomIntFromInterval());
-  displayPokemon();
+  setTimeout(() => displayPokemon(), 2110);
+  setTimeout(() => hideGifLoadingAnimation(), 2110);
+  setTimeout(() => showPokemonImageForLoadingAnimation(), 2110);
 }
 
 async function handleForwardButton() {
@@ -58,4 +66,20 @@ function handleDownButton() {
 function handleCryButton() {
   playPokemonCry();
   speaker.classList.add("shake");
+}
+
+function showGifLoadingAnimation() {
+  loadingAnimationImg.style.display = "block";
+}
+
+function hideGifLoadingAnimation() {
+  loadingAnimationImg.style.display = "none";
+}
+
+function hidePokemonImageForLoadingAnimation() {
+  image.style.display = "none";
+}
+
+function showPokemonImageForLoadingAnimation() {
+  image.style.display = "block";
 }
