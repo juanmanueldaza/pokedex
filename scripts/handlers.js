@@ -71,21 +71,25 @@ function handleCryButton() {
 function handleSecondaryLeftArrow() {
   statsPosition -= 1;
   if (statsPosition < 0) {
-    statsPosition = statsKeys.length - 1;
+    statsPosition = pokemonStats.length - 1;
   }
   if (statsPosition === 0) {
     changeName(pokeName);
+  } else if (statsPosition <= statsTitles.length - 1) {
+    nameTitle.innerHTML = `<h3>${statsTitles[statsPosition]}</h3><br><p>${pokemonStats[statsPosition]}</p>`;
   } else {
-    nameTitle.innerHTML = `<h3>${statsKeys[statsPosition]}</h3><br><p>${pokemonStats[statsPosition]}</p>`;
+      nameTitle.innerHTML = `<h3>Abilities</h3><br><p>${pokemonStats[statsPosition]}</p>`;
   }
 }
 
 function handleSecondaryRightArrow() {
   statsPosition += 1;
-  if (statsPosition > statsKeys.length - 1) {
+  if (statsPosition > pokemonStats.length - 1) {
     statsPosition = 0;
     changeName(pokeName);
+  } else if (statsPosition <= statsTitles.length - 1) {
+    nameTitle.innerHTML = `<h3>${statsTitles[statsPosition]}</h3><br><p>${pokemonStats[statsPosition]}</p>`;
   } else {
-    nameTitle.innerHTML = `<h3>${statsKeys[statsPosition]}</h3><br><p>${pokemonStats[statsPosition]}</p>`;
-  }
+      nameTitle.innerHTML = `<h3>Abilities</h3><br><p>${pokemonStats[statsPosition]}</p>`;
+  } 
 }
