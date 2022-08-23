@@ -19,7 +19,6 @@ function displayPokemon() {
   changeName(pokeName);
   changeGender(spriteKey);
   changeTypes(data.types);
-  getStats();
 }
 
 async function changePokemonPicture() {

@@ -22,8 +22,9 @@ function getAvalaibleSprites(data) {
 
 function getStats(data) {
   let statsKeys = [];
-  statsKeys.push(data.name, data.height, data.stats[0].base_stat, data.stats[1].base_stat, data.stats[2].base_stat, data.stats[5].base_stat)
-  
+  console.log(statsKeys);
+  statsKeys.push(data.name, data.height, data.stats[0].base_stat, data.stats[1].base_stat, data.stats[2].base_stat, data.stats[5].base_stat);
+  console.log(statsKeys);
   return(statsKeys);
 }
 
