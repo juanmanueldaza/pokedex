@@ -136,6 +136,7 @@ input {
 #secondary_left_arrow:hover,
 #secondary_right_arrow:hover {
   filter: invert();
+  cursor: pointer;
 }
 
 #d_pad:active {
@@ -158,6 +159,7 @@ input {
 #btn_celeste10:hover,
 #btn_orange:hover {
   filter: saturate(200%) hue-rotate(-10deg);
+  cursor: pointer;
 }
 
 #main_light_blue_button:active,
