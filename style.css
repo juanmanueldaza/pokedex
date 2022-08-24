@@ -155,7 +155,8 @@ input {
 #btn_celeste7:hover,
 #btn_celeste8:hover,
 #btn_celeste9:hover,
-#btn_celeste10:hover {
+#btn_celeste10:hover,
+#btn_orange:hover {
   filter: saturate(200%) hue-rotate(-10deg);
 }
 
@@ -173,7 +174,8 @@ input {
 #btn_celeste7:active,
 #btn_celeste8:active,
 #btn_celeste9:active,
-#btn_celeste10:active {
+#btn_celeste10:active,
+#btn_orange:active {
   transform: translate(2px, 2px);
 }
 

@@ -78,7 +78,7 @@ function handleSecondaryLeftArrow() {
   } else if (statsPosition <= statsTitles.length - 1) {
     nameTitle.innerHTML = `<h3>${statsTitles[statsPosition]}</h3><br><p>${pokemonStats[statsPosition]}</p>`;
   } else {
-      nameTitle.innerHTML = `<h3>Abilities</h3><br><p>${pokemonStats[statsPosition]}</p>`;
+    nameTitle.innerHTML = `<h3>Abilities</h3><br><p>${pokemonStats[statsPosition]}</p>`;
   }
 }
 
@@ -90,19 +90,16 @@ function handleSecondaryRightArrow() {
   } else if (statsPosition <= statsTitles.length - 1) {
     nameTitle.innerHTML = `<h3>${statsTitles[statsPosition]}</h3><br><p>${pokemonStats[statsPosition]}</p>`;
   } else {
-      nameTitle.innerHTML = `<h3>Abilities</h3><br><p>${pokemonStats[statsPosition]}</p>`;
-  } 
+    nameTitle.innerHTML = `<h3>Abilities</h3><br><p>${pokemonStats[statsPosition]}</p>`;
+  }
 }
 
-
 async function handleMuteButton() {
-  if (!mute) {
-    mute = true;
+  if (!volume.mute) {
     unmuteIcon.classList.remove("hidden");
     muteIcon.classList.add("hidden");
     volume.mute = true;
   } else {
-    mute = false;
     unmuteIcon.classList.add("hidden");
     muteIcon.classList.remove("hidden");
     volume.mute = false;
@@ -115,10 +112,12 @@ function handleDataButtons(position) {
   } else if (position > 0 && position < statsTitles.length) {
     statsPosition = position;
     nameTitle.innerHTML = `<h3>${statsTitles[statsPosition]}</h3><br><p>${pokemonStats[statsPosition]}</p>`;
-  } else if (position >= statsTitles.length && pokemonStats[position] != undefined) {
-    nameTitle.innerHTML = `<h3>Abilities</h3><br><p>${pokemonStats[position]}</p>`
+  } else if (
+    position >= statsTitles.length &&
+    pokemonStats[position] != undefined
+  ) {
+    nameTitle.innerHTML = `<h3>Abilities</h3><br><p>${pokemonStats[position]}</p>`;
   } else {
     nameTitle.innerHTML = ``;
   }
 }
-

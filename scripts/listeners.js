@@ -46,18 +46,16 @@ window.onload = async () => {
     handleSecondaryRightArrow();
   };
 
-
   muteButton.onmousedown = () => {
     handleMuteButton();
   };
-
 
   dataButtonOne.onmousedown = () => {
     synth.triggerAttackRelease("C8", "60n", "+0.01");
     if (data) {
       handleDataButtons(0);
     } else {
-      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`
+      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`;
     }
   };
   dataButtonTwo.onmousedown = () => {
@@ -65,7 +63,7 @@ window.onload = async () => {
     if (data) {
       handleDataButtons(1);
     } else {
-      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`
+      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`;
     }
   };
   dataButtonThree.onmousedown = () => {
@@ -73,7 +71,7 @@ window.onload = async () => {
     if (data) {
       handleDataButtons(2);
     } else {
-      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`
+      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`;
     }
   };
   dataButtonFour.onmousedown = () => {
@@ -81,7 +79,7 @@ window.onload = async () => {
     if (data) {
       handleDataButtons(3);
     } else {
-      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`
+      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`;
     }
   };
   dataButtonFive.onmousedown = () => {
@@ -89,7 +87,7 @@ window.onload = async () => {
     if (data) {
       handleDataButtons(4);
     } else {
-      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`
+      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`;
     }
   };
   dataButtonSix.onmousedown = () => {
@@ -97,7 +95,7 @@ window.onload = async () => {
     if (data) {
       handleDataButtons(5);
     } else {
-      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`
+      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`;
     }
   };
   dataButtonSeven.onmousedown = () => {
@@ -105,7 +103,7 @@ window.onload = async () => {
     if (data) {
       handleDataButtons(6);
     } else {
-      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`
+      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`;
     }
   };
   dataButtonEight.onmousedown = () => {
@@ -113,7 +111,7 @@ window.onload = async () => {
     if (data) {
       handleDataButtons(7);
     } else {
-      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`
+      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`;
     }
   };
   dataButtonNine.onmousedown = () => {
@@ -121,13 +119,13 @@ window.onload = async () => {
     if (data) {
       handleDataButtons(8);
     } else {
-      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`
+      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`;
     }
   };
   dataButtonTen.onmousedown = () => {
     synth.triggerAttackRelease("C8", "60n", "+0.01");
     nameTitle.innerHTML = `Pokédex`;
-  }
+  };
 
   window.onkeydown = (e) => {
     if (e.keyCode === 37) {
