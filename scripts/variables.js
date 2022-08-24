@@ -14,6 +14,10 @@ let mainBigLed = document.getElementById("main_big_led");
 let speaker = document.getElementById("speaker");
 let secondaryLeftArrow = document.getElementById("secondary_left_arrow");
 let secondaryRightArrow = document.getElementById("secondary_right_arrow");
+let muteButton = document.getElementById("btn_orange");
+let muteIcon = document.getElementById("muteIcon");
+let unmuteIcon = document.getElementById("unmuteIcon");
+let mute = false;
 let pokemonStats;
 let statsKeys = ["Name", "Height", "HP", "Attack", "Defense", "Speed"];
 let statsPosition = 0;
@@ -29,4 +33,5 @@ let poketypeOne;
 let poketypeTwo;
 let randomPokemon;
 
-const synth = new Tone.DuoSynth().toDestination();
+const volume = new Tone.Volume(0).toDestination();
+const synth = new Tone.DuoSynth().connect(volume);

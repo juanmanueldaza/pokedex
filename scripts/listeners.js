@@ -45,6 +45,11 @@ window.onload = async () => {
     synth.triggerAttackRelease("A7", "60n", "+0.01");
     handleSecondaryRightArrow();
   };
+
+  muteButton.onmousedown = () => {
+    handleMuteButton();
+  };
+
   window.onkeydown = (e) => {
     if (e.keyCode === 37) {
       backwardButton.onmousedown();

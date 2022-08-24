@@ -89,3 +89,17 @@ function handleSecondaryRightArrow() {
     nameTitle.innerHTML = `<h3>${statsKeys[statsPosition]}</h3><br><p>${pokemonStats[statsPosition]}</p>`;
   }
 }
+
+async function handleMuteButton() {
+  if (!mute) {
+    mute = true;
+    unmuteIcon.classList.remove("hidden");
+    muteIcon.classList.add("hidden");
+    volume.mute = true;
+  } else {
+    mute = false;
+    unmuteIcon.classList.add("hidden");
+    muteIcon.classList.remove("hidden");
+    volume.mute = false;
+  }
+}
