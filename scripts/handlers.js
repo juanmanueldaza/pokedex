@@ -93,3 +93,16 @@ function handleSecondaryRightArrow() {
       nameTitle.innerHTML = `<h3>Abilities</h3><br><p>${pokemonStats[statsPosition]}</p>`;
   } 
 }
+
+function handleDataButtons(position) {
+  if (position === 0) {
+    changeName(pokeName);
+  } else if (position > 0 && position < statsTitles.length) {
+    statsPosition = position;
+    nameTitle.innerHTML = `<h3>${statsTitles[statsPosition]}</h3><br><p>${pokemonStats[statsPosition]}</p>`;
+  } else if (position >= statsTitles.length && pokemonStats[position] != undefined) {
+    nameTitle.innerHTML = `<h3>Abilities</h3><br><p>${pokemonStats[position]}</p>`
+  } else {
+    nameTitle.innerHTML = ``;
+  }
+}
