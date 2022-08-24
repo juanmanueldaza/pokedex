@@ -46,6 +46,7 @@ window.onload = async () => {
     handleSecondaryRightArrow();
   };
   dataButtonOne.onmousedown = () => {
+    synth.triggerAttackRelease("C8", "60n", "+0.01");
     if (data) {
       handleDataButtons(0);
     } else {
@@ -53,6 +54,7 @@ window.onload = async () => {
     }
   };
   dataButtonTwo.onmousedown = () => {
+    synth.triggerAttackRelease("C8", "60n", "+0.01");
     if (data) {
       handleDataButtons(1);
     } else {
@@ -60,6 +62,7 @@ window.onload = async () => {
     }
   };
   dataButtonThree.onmousedown = () => {
+    synth.triggerAttackRelease("C8", "60n", "+0.01");
     if (data) {
       handleDataButtons(2);
     } else {
@@ -67,6 +70,7 @@ window.onload = async () => {
     }
   };
   dataButtonFour.onmousedown = () => {
+    synth.triggerAttackRelease("C8", "60n", "+0.01");
     if (data) {
       handleDataButtons(3);
     } else {
@@ -74,6 +78,7 @@ window.onload = async () => {
     }
   };
   dataButtonFive.onmousedown = () => {
+    synth.triggerAttackRelease("C8", "60n", "+0.01");
     if (data) {
       handleDataButtons(4);
     } else {
@@ -81,6 +86,7 @@ window.onload = async () => {
     }
   };
   dataButtonSix.onmousedown = () => {
+    synth.triggerAttackRelease("C8", "60n", "+0.01");
     if (data) {
       handleDataButtons(5);
     } else {
@@ -88,6 +94,7 @@ window.onload = async () => {
     }
   };
   dataButtonSeven.onmousedown = () => {
+    synth.triggerAttackRelease("C8", "60n", "+0.01");
     if (data) {
       handleDataButtons(6);
     } else {
@@ -95,6 +102,7 @@ window.onload = async () => {
     }
   };
   dataButtonEight.onmousedown = () => {
+    synth.triggerAttackRelease("C8", "60n", "+0.01");
     if (data) {
       handleDataButtons(7);
     } else {
@@ -102,6 +110,7 @@ window.onload = async () => {
     }
   };
   dataButtonNine.onmousedown = () => {
+    synth.triggerAttackRelease("C8", "60n", "+0.01");
     if (data) {
       handleDataButtons(8);
     } else {
@@ -109,6 +118,7 @@ window.onload = async () => {
     }
   };
   dataButtonTen.onmousedown = () => {
+    synth.triggerAttackRelease("C8", "60n", "+0.01");
     nameTitle.innerHTML = `Pokédex`;
   }
   window.onkeydown = (e) => {
