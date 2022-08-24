@@ -7,6 +7,10 @@
   -webkit-user-drag: none;
 }
 
+.hidden {
+  display: none !important;
+}
+
 body {
   background-image: url(./assets/bg.png);
   background-size: cover;
@@ -62,12 +66,14 @@ input {
   color: #323232;
 }
 
-#pokeNameContainer, #pokeGenderContainer, #pokeTypesContainer {
+#pokeNameContainer,
+#pokeGenderContainer,
+#pokeTypesContainer {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center
+  text-align: center;
 }
 
 #pokeName {
@@ -207,11 +213,9 @@ input {
   animation-delay: 0.5s;
 }
 
-
-
 .bug {
   border: white solid 2px;
-  background: #A0C888;
+  background: #a0c888;
 }
 
 .dark {
@@ -221,22 +225,22 @@ input {
 
 .dragon {
   border: white solid 2px;
-  background: linear-gradient(180deg, #6898F8 50%, #F87070 50%);
+  background: linear-gradient(180deg, #6898f8 50%, #f87070 50%);
 }
 
 .electric {
   border: white solid 2px;
-  background: #E0E000;
+  background: #e0e000;
 }
 
 .fairy {
   border: white solid 2px;
-  background: #FFAAFF;
+  background: #ffaaff;
 }
 
 .fighting {
   border: white solid 2px;
-  background: #F87070;
+  background: #f87070;
 }
 
 .fire {
@@ -246,66 +250,62 @@ input {
 
 .flying {
   border: white solid 2px;
-  background: linear-gradient(180deg, #58C8F0 50%, #B8B8A8 50%);
+  background: linear-gradient(180deg, #58c8f0 50%, #b8b8a8 50%);
 }
 
 .ghost {
   border: white solid 2px;
-  background: #A870F8;
+  background: #a870f8;
 }
 
 .grass {
   border: white solid 2px;
-  background: #90E880;
+  background: #90e880;
 }
 
 .ground {
   border: white solid 2px;
-  background: linear-gradient(180deg, #E0E000 50%, #C8A048 50%);
+  background: linear-gradient(180deg, #e0e000 50%, #c8a048 50%);
 }
 
-.ice { 
+.ice {
   border: white solid 2px;
-  background: #30D8D0;
+  background: #30d8d0;
 }
 
 .normal {
   border: white solid 2px;
-  background: #B8B8A8;
+  background: #b8b8a8;
 }
 
 .poison {
   border: white solid 2px;
-  background: #E090F8;
+  background: #e090f8;
 }
 
 .psychic {
   border: white solid 2px;
-  background: #F838A8;
+  background: #f838a8;
 }
 
 .rock {
   border: white solid 2px;
-  background: #C8A048;
+  background: #c8a048;
 }
 
 .steel {
   border: white solid 2px;
-  background: #B8B8D0;
+  background: #b8b8d0;
 }
 
 .water {
   border: white solid 2px;
-  background: #6898F8;
+  background: #6898f8;
 }
-
-
-
-
 
 @keyframes glowMotion {
   0% {
-    transform: translateX(-100px)
+    transform: translateX(-100px);
   }
   50% {
     transform: translateX(0px);
@@ -386,4 +386,3 @@ input {
     width: 100vw;
   }
 }
-

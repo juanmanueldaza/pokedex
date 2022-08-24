@@ -94,6 +94,21 @@ function handleSecondaryRightArrow() {
   } 
 }
 
+
+async function handleMuteButton() {
+  if (!mute) {
+    mute = true;
+    unmuteIcon.classList.remove("hidden");
+    muteIcon.classList.add("hidden");
+    volume.mute = true;
+  } else {
+    mute = false;
+    unmuteIcon.classList.add("hidden");
+    muteIcon.classList.remove("hidden");
+    volume.mute = false;
+  }
+}
+
 function handleDataButtons(position) {
   if (position === 0) {
     changeName(pokeName);
@@ -106,3 +121,4 @@ function handleDataButtons(position) {
     nameTitle.innerHTML = ``;
   }
 }
+

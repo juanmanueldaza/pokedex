@@ -45,6 +45,13 @@ window.onload = async () => {
     synth.triggerAttackRelease("A7", "60n", "+0.01");
     handleSecondaryRightArrow();
   };
+
+
+  muteButton.onmousedown = () => {
+    handleMuteButton();
+  };
+
+
   dataButtonOne.onmousedown = () => {
     synth.triggerAttackRelease("C8", "60n", "+0.01");
     if (data) {
@@ -121,6 +128,7 @@ window.onload = async () => {
     synth.triggerAttackRelease("C8", "60n", "+0.01");
     nameTitle.innerHTML = `Pokédex`;
   }
+
   window.onkeydown = (e) => {
     if (e.keyCode === 37) {
       backwardButton.onmousedown();
