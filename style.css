@@ -16,6 +16,10 @@ body {
   background-size: cover;
 }
 
+.black {
+  color: #323232;
+}
+
 #pokeImg {
   border-radius: 10%;
   width: 100%;
