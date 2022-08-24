@@ -5,7 +5,6 @@ window.onload = async () => {
   };
   searchInput.onkeydown = (e) => {
     if (e.keyCode === 13) {
-      synth.triggerAttackRelease("D8", "60n", "+0.01");
       searchButton.onmousedown();
     }
   };
