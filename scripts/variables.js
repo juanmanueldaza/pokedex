@@ -5,10 +5,25 @@ let loadingAnimationImg = document.getElementById("loadingGifAnimation");
 let nameTitle = document.getElementById("pokeName");
 let pokeGender = document.getElementById("pokeGender");
 let pokeTypes = document.getElementById("pokeTypes");
+
 let forwardButton = document.getElementById("d_pad_right");
+let forwardButtonClickableArea = document.getElementById(
+  "d_pad_right_clickable_area"
+);
 let backwardButton = document.getElementById("d_pad_left");
+let backwardButtonClickableArea = document.getElementById(
+    "d_pad_left_clickable_area"
+  );
 let upButton = document.getElementById("d_pad_up");
+let upButtonClickableArea = document.getElementById(
+    "d_pad_up_clickable_area"
+  );
 let downButton = document.getElementById("d_pad_down");
+let downButtonClickableArea = document.getElementById(
+    "d_pad_down_clickable_area"
+  );
+let dPad = document.getElementById("d_pad");
+  
 let cryButton = document.getElementById("primary_screen_red_button");
 let mainBigLed = document.getElementById("main_big_led");
 let speaker = document.getElementById("speaker");

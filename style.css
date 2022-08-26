@@ -133,17 +133,13 @@ input {
   text-shadow: 1px 1px 2px rgb(32, 32, 32);
 }
 
-#d_pad_left:hover,
-#d_pad_right:hover,
-#d_pad_up:hover,
-#d_pad_down:hover,
 #secondary_left_arrow:hover,
 #secondary_right_arrow:hover {
   filter: invert();
   cursor: pointer;
 }
 
-#d_pad:active {
+.d_pad_pressed {
   transform-origin: 415px 625px;
   transform: scale(95%);
 }
@@ -195,6 +191,11 @@ input {
 }
 
 .pointer {
+  cursor: pointer;
+}
+
+.clickable {
+  filter: invert();
   cursor: pointer;
 }
 

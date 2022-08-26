@@ -12,22 +12,69 @@ window.onload = async () => {
       searchButton.onmousedown();
     }
   };
-  forwardButton.onmousedown = async () => {
+  
+  forwardButtonClickableArea.onmousedown = async () => {
     synth.triggerAttackRelease("E8", "60n", "+0.01");
+    dPad.classList.add("d_pad_pressed");
     handleForwardButton();
   };
-  backwardButton.onmousedown = async () => {
+  forwardButtonClickableArea.onmouseover = (e) => {
+    forwardButton.classList.add("clickable");
+    forwardButtonClickableArea.style.cursor = "pointer";
+  }
+  forwardButtonClickableArea.onmouseout = (e) => {
+    forwardButton.classList.remove("clickable");
+  }
+  forwardButtonClickableArea.onmouseup = (e) => {
+    dPad.classList.remove("d_pad_pressed");
+  }
+
+  backwardButtonClickableArea.onmousedown = async () => {
     synth.triggerAttackRelease("F8", "60n", "+0.01");
+    dPad.classList.add("d_pad_pressed");
     handleBackwardButton();
   };
+  backwardButtonClickableArea.onmouseover = (e) => {
+    backwardButton.classList.add("clickable");
+    backwardButtonClickableArea.style.cursor = "pointer";
+  }
+  backwardButtonClickableArea.onmouseout = (e) => {
+    backwardButton.classList.remove("clickable");
+  };
+  backwardButtonClickableArea.onmouseup = (e) => {
+    dPad.classList.remove("d_pad_pressed");
+  };
 
-  upButton.onmousedown = () => {
+  upButtonClickableArea.onmousedown = () => {
     synth.triggerAttackRelease("G8", "60n", "+0.01");
+    dPad.classList.add("d_pad_pressed");
     handleUpButton();
   };
-  downButton.onmousedown = () => {
+  upButtonClickableArea.onmouseover = (e) => {
+    upButton.classList.add("clickable");
+    upButtonClickableArea.style.cursor = "pointer";
+  }
+  upButtonClickableArea.onmouseout = (e) => {
+    upButton.classList.remove("clickable");
+  };
+  upButtonClickableArea.onmouseup = (e) => {
+    dPad.classList.remove("d_pad_pressed");
+  };
+
+  downButtonClickableArea.onmousedown = () => {
     synth.triggerAttackRelease("A8", "60n", "+0.01");
+    dPad.classList.add("d_pad_pressed");
     handleDownButton();
+  };
+  downButtonClickableArea.onmouseover = (e) => {
+    downButton.classList.add("clickable");
+    downButtonClickableArea.style.cursor = "pointer";
+  }
+  downButtonClickableArea.onmouseout = (e) => {
+    downButton.classList.remove("clickable");
+  };
+  downButtonClickableArea.onmouseup = (e) => {
+    dPad.classList.remove("d_pad_pressed");
   };
 
   cryButton.onmousedown = () => {
