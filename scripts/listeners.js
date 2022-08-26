@@ -1,6 +1,10 @@
 window.onload = async () => {
   searchButton.onmousedown = async (e) => {
     synth.triggerAttackRelease("C8", "60n", "+0.01");
+    dataButtons.forEach((button) => { 
+      button.classList.remove("pressed");
+    });
+    dataButtonOne.classList.add('pressed');
     await handleSearchButton(e);
   };
   searchInput.onkeydown = (e) => {
@@ -34,6 +38,10 @@ window.onload = async () => {
   };
   mainBigLed.onmousedown = async () => {
     synth.triggerAttackRelease("A6", "60n", "+0.01");
+    dataButtons.forEach((button) => { 
+      button.classList.remove("pressed");
+    });
+    dataButtonOne.classList.add('pressed');
     await handleRandom();
   };
   secondaryLeftArrow.onmousedown = () => {
@@ -51,6 +59,10 @@ window.onload = async () => {
 
   dataButtonOne.onmousedown = () => {
     synth.triggerAttackRelease("C4", "500n", "+0.01");
+    dataButtons.forEach((button) => { 
+      button.classList.remove("pressed");
+    });
+    dataButtonOne.classList.add('pressed');
     if (data) {
       handleDataButtons(0);
     } else {
@@ -59,6 +71,10 @@ window.onload = async () => {
   };
   dataButtonTwo.onmousedown = () => {
     synth.triggerAttackRelease("C5", "500n", "+0.01");
+    dataButtons.forEach((button) => { 
+      button.classList.remove("pressed");
+    });
+    dataButtonTwo.classList.add('pressed');
     if (data) {
       handleDataButtons(1);
     } else {
@@ -67,6 +83,10 @@ window.onload = async () => {
   };
   dataButtonThree.onmousedown = () => {
     synth.triggerAttackRelease("C6", "500n", "+0.01");
+    dataButtons.forEach((button) => { 
+      button.classList.remove("pressed");
+    });
+    dataButtonThree.classList.add('pressed');
     if (data) {
       handleDataButtons(2);
     } else {
@@ -75,6 +95,10 @@ window.onload = async () => {
   };
   dataButtonFour.onmousedown = () => {
     synth.triggerAttackRelease("A4", "500n", "+0.01");
+    dataButtons.forEach((button) => { 
+      button.classList.remove("pressed");
+    });
+    dataButtonFour.classList.add('pressed');
     if (data) {
       handleDataButtons(3);
     } else {
@@ -83,6 +107,10 @@ window.onload = async () => {
   };
   dataButtonFive.onmousedown = () => {
     synth.triggerAttackRelease("A5", "500n", "+0.01");
+    dataButtons.forEach((button) => { 
+      button.classList.remove("pressed");
+    });
+    dataButtonFive.classList.add('pressed');
     if (data) {
       handleDataButtons(4);
     } else {
@@ -91,6 +119,10 @@ window.onload = async () => {
   };
   dataButtonSix.onmousedown = () => {
     synth.triggerAttackRelease("A6", "500n", "+0.01");
+    dataButtons.forEach((button) => { 
+      button.classList.remove("pressed");
+    });
+    dataButtonSix.classList.add('pressed');
     if (data) {
       handleDataButtons(5);
     } else {
@@ -99,6 +131,10 @@ window.onload = async () => {
   };
   dataButtonSeven.onmousedown = () => {
     synth.triggerAttackRelease("B4", "500n", "+0.01");
+    dataButtons.forEach((button) => { 
+      button.classList.remove("pressed");
+    });
+    dataButtonSeven.classList.add('pressed');
     if (data) {
       handleDataButtons(6);
     } else {
@@ -107,6 +143,10 @@ window.onload = async () => {
   };
   dataButtonEight.onmousedown = () => {
     synth.triggerAttackRelease("B5", "500n", "+0.01");
+    dataButtons.forEach((button) => { 
+      button.classList.remove("pressed");
+    });
+    dataButtonEight.classList.add('pressed');
     if (data) {
       handleDataButtons(7);
     } else {
@@ -115,6 +155,10 @@ window.onload = async () => {
   };
   dataButtonNine.onmousedown = () => {
     synth.triggerAttackRelease("B6", "500n", "+0.01");
+    dataButtons.forEach((button) => { 
+      button.classList.remove("pressed");
+    });
+    dataButtonNine.classList.add('pressed');
     if (data) {
       handleDataButtons(8);
     } else {
@@ -123,6 +167,10 @@ window.onload = async () => {
   };
   dataButtonTen.onmousedown = () => {
     synth.triggerAttackRelease("F4", "500n", "+0.01");
+    dataButtons.forEach((button) => { 
+      button.classList.remove("pressed");
+    });
+    dataButtonTen.classList.add('pressed');
     nameTitle.innerHTML = `Pokédex`;
   };
 

@@ -25,6 +25,7 @@ let dataButtonSeven = document.getElementById("btn_celeste7");
 let dataButtonEight = document.getElementById("btn_celeste8");
 let dataButtonNine = document.getElementById("btn_celeste9");
 let dataButtonTen = document.getElementById("btn_celeste10");
+let dataButtons = document.querySelectorAll(".btns_celestes")
 
 let pokemonStats;
 let statsTitles = ["Name", "Height", "HP", "Attack", "Defense", "Speed"];

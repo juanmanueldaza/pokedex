@@ -94,6 +94,10 @@ input {
   font-size: 18px;
 }
 
+.pressed {
+  transform: translate(2px, 2px);
+}
+
 #pokeGender {
   stroke: rgb(103, 103, 103);
   stroke-width: 1px;
