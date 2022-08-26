@@ -33,7 +33,7 @@ window.onload = async () => {
     speaker.classList.remove("shake");
   };
   mainBigLed.onmousedown = async () => {
-    synth.triggerAttackRelease("B8", "60n", "+0.01");
+    synth.triggerAttackRelease("A6", "60n", "+0.01");
     await handleRandom();
   };
   secondaryLeftArrow.onmousedown = () => {
@@ -50,7 +50,7 @@ window.onload = async () => {
   };
 
   dataButtonOne.onmousedown = () => {
-    synth.triggerAttackRelease("C8", "60n", "+0.01");
+    synth.triggerAttackRelease("C4", "500n", "+0.01");
     if (data) {
       handleDataButtons(0);
     } else {
@@ -58,7 +58,7 @@ window.onload = async () => {
     }
   };
   dataButtonTwo.onmousedown = () => {
-    synth.triggerAttackRelease("C8", "60n", "+0.01");
+    synth.triggerAttackRelease("C5", "500n", "+0.01");
     if (data) {
       handleDataButtons(1);
     } else {
@@ -66,7 +66,7 @@ window.onload = async () => {
     }
   };
   dataButtonThree.onmousedown = () => {
-    synth.triggerAttackRelease("C8", "60n", "+0.01");
+    synth.triggerAttackRelease("C6", "500n", "+0.01");
     if (data) {
       handleDataButtons(2);
     } else {
@@ -74,7 +74,7 @@ window.onload = async () => {
     }
   };
   dataButtonFour.onmousedown = () => {
-    synth.triggerAttackRelease("C8", "60n", "+0.01");
+    synth.triggerAttackRelease("A4", "500n", "+0.01");
     if (data) {
       handleDataButtons(3);
     } else {
@@ -82,7 +82,7 @@ window.onload = async () => {
     }
   };
   dataButtonFive.onmousedown = () => {
-    synth.triggerAttackRelease("C8", "60n", "+0.01");
+    synth.triggerAttackRelease("A5", "500n", "+0.01");
     if (data) {
       handleDataButtons(4);
     } else {
@@ -90,7 +90,7 @@ window.onload = async () => {
     }
   };
   dataButtonSix.onmousedown = () => {
-    synth.triggerAttackRelease("C8", "60n", "+0.01");
+    synth.triggerAttackRelease("A6", "500n", "+0.01");
     if (data) {
       handleDataButtons(5);
     } else {
@@ -98,7 +98,7 @@ window.onload = async () => {
     }
   };
   dataButtonSeven.onmousedown = () => {
-    synth.triggerAttackRelease("C8", "60n", "+0.01");
+    synth.triggerAttackRelease("B4", "500n", "+0.01");
     if (data) {
       handleDataButtons(6);
     } else {
@@ -106,7 +106,7 @@ window.onload = async () => {
     }
   };
   dataButtonEight.onmousedown = () => {
-    synth.triggerAttackRelease("C8", "60n", "+0.01");
+    synth.triggerAttackRelease("B5", "500n", "+0.01");
     if (data) {
       handleDataButtons(7);
     } else {
@@ -114,7 +114,7 @@ window.onload = async () => {
     }
   };
   dataButtonNine.onmousedown = () => {
-    synth.triggerAttackRelease("C8", "60n", "+0.01");
+    synth.triggerAttackRelease("B6", "500n", "+0.01");
     if (data) {
       handleDataButtons(8);
     } else {
@@ -122,7 +122,7 @@ window.onload = async () => {
     }
   };
   dataButtonTen.onmousedown = () => {
-    synth.triggerAttackRelease("C8", "60n", "+0.01");
+    synth.triggerAttackRelease("F4", "500n", "+0.01");
     nameTitle.innerHTML = `Pokédex`;
   };
 
