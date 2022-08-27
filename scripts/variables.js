@@ -1,6 +1,8 @@
 let searchInput = document.getElementById("input");
 let searchButton = document.getElementById("primary_screen_under_left_button");
-let refreshButton = document.getElementById("primary_screen_under_right_button");
+let refreshButton = document.getElementById(
+  "primary_screen_under_right_button"
+);
 let helpButton = document.getElementById("main_light_blue_button");
 let image = document.getElementById("pokeImg");
 let loadingAnimationImg = document.getElementById("loadingGifAnimation");
@@ -14,18 +16,16 @@ let forwardButtonClickableArea = document.getElementById(
 );
 let backwardButton = document.getElementById("d_pad_left");
 let backwardButtonClickableArea = document.getElementById(
-    "d_pad_left_clickable_area"
-  );
+  "d_pad_left_clickable_area"
+);
 let upButton = document.getElementById("d_pad_up");
-let upButtonClickableArea = document.getElementById(
-    "d_pad_up_clickable_area"
-  );
+let upButtonClickableArea = document.getElementById("d_pad_up_clickable_area");
 let downButton = document.getElementById("d_pad_down");
 let downButtonClickableArea = document.getElementById(
-    "d_pad_down_clickable_area"
-  );
+  "d_pad_down_clickable_area"
+);
 let dPad = document.getElementById("d_pad");
-  
+
 let cryButton = document.getElementById("primary_screen_red_button");
 let mainBigLed = document.getElementById("main_big_led");
 let speaker = document.getElementById("speaker");
@@ -42,7 +42,7 @@ let dataButtonSeven = document.getElementById("btn_celeste7");
 let dataButtonEight = document.getElementById("btn_celeste8");
 let dataButtonNine = document.getElementById("btn_celeste9");
 let dataButtonTen = document.getElementById("btn_celeste10");
-let dataButtons = document.querySelectorAll(".btns_celestes")
+let dataButtons = document.querySelectorAll(".btns_celestes");
 
 let pokemonStats;
 let statsTitles = ["Name", "Height", "HP", "Attack", "Defense", "Speed"];
@@ -64,3 +64,5 @@ let muteIcon = document.getElementById("muteIcon");
 let soundIcon = document.getElementById("soundIcon");
 const volume = new Tone.Volume(0).toDestination();
 const synth = new Tone.DuoSynth().connect(volume);
+
+let helpMode = false;
