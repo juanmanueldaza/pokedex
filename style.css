@@ -137,6 +137,10 @@ input {
   transform: translate(966px, 562px) scale(85%);
 }
 
+#helpIcon {
+  transform: translate(75px, 537px);
+}
+
 #secondary_left_arrow:hover,
 #secondary_right_arrow:hover {
   filter: invert();
