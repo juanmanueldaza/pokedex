@@ -7,6 +7,16 @@ window.onload = async () => {
     dataButtonOne.classList.add('pressed');
     await handleSearchButton(e);
   };
+  searchButton.onmouseover = (e) => {
+    if (document.body.style.filter === "grayscale(0.5)") {
+      nameTitle.innerHTML = `<p>Search button</p>`;
+    }
+  }
+  searchButton.onmouseout = (e) => {
+    if (document.body.style.filter === "grayscale(0.5)") {
+      nameTitle.innerHTML = `<p>Hover over buttons for help</p>`;
+    }
+  }
   searchInput.onkeydown = (e) => {
     if (e.keyCode === 13) {
       searchButton.onmousedown();
@@ -21,6 +31,26 @@ window.onload = async () => {
     setInterval(() => {
           nameTitle.innerHTML += `.`;
     }, 500);
+  }
+
+  helpButton.onmousedown = (e) => {
+    if (document.body.style.filter === "grayscale(0.5)") {
+      document.body.style.filter = "grayscale(0)";
+      nameTitle.innerHTML = ``
+    } else {
+      document.body.style.filter = "grayscale(0.5)";
+      nameTitle.innerHTML = `<p>Hover over buttons for help</p>`;
+    }
+  }
+  helpButton.onmouseover = (e) => {
+    if (document.body.style.filter === "grayscale(0.5)") {
+      nameTitle.innerHTML = `<p>Push to exit help</p>`
+    }
+  }
+  helpButton.onmouseout = (e) => {
+    if (document.body.style.filter === "grayscale(0.5)") {
+      nameTitle.innerHTML = `<p>Hover over buttons for help</p>`;
+    }
   }
   
   forwardButtonClickableArea.onmousedown = async () => {
@@ -123,7 +153,7 @@ window.onload = async () => {
     if (data) {
       handleDataButtons(0);
     } else {
-      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`;
+      searchForPokemonFirst();
     }
   };
   dataButtonTwo.onmousedown = () => {
@@ -135,7 +165,7 @@ window.onload = async () => {
     if (data) {
       handleDataButtons(1);
     } else {
-      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`;
+      searchForPokemonFirst();
     }
   };
   dataButtonThree.onmousedown = () => {
@@ -147,7 +177,7 @@ window.onload = async () => {
     if (data) {
       handleDataButtons(2);
     } else {
-      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`;
+      searchForPokemonFirst();
     }
   };
   dataButtonFour.onmousedown = () => {
@@ -159,7 +189,7 @@ window.onload = async () => {
     if (data) {
       handleDataButtons(3);
     } else {
-      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`;
+      searchForPokemonFirst();
     }
   };
   dataButtonFive.onmousedown = () => {
@@ -171,7 +201,7 @@ window.onload = async () => {
     if (data) {
       handleDataButtons(4);
     } else {
-      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`;
+      searchForPokemonFirst();
     }
   };
   dataButtonSix.onmousedown = () => {
@@ -183,7 +213,7 @@ window.onload = async () => {
     if (data) {
       handleDataButtons(5);
     } else {
-      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`;
+      searchForPokemonFirst();
     }
   };
   dataButtonSeven.onmousedown = () => {
@@ -195,7 +225,7 @@ window.onload = async () => {
     if (data) {
       handleDataButtons(6);
     } else {
-      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`;
+      searchForPokemonFirst();
     }
   };
   dataButtonEight.onmousedown = () => {
@@ -207,7 +237,7 @@ window.onload = async () => {
     if (data) {
       handleDataButtons(7);
     } else {
-      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`;
+      searchForPokemonFirst();
     }
   };
   dataButtonNine.onmousedown = () => {
@@ -219,7 +249,7 @@ window.onload = async () => {
     if (data) {
       handleDataButtons(8);
     } else {
-      nameTitle.innerHTML = `<p>Search for a Pokémon first</p>`;
+      searchForPokemonFirst();
     }
   };
   dataButtonTen.onmousedown = () => {
@@ -228,8 +258,13 @@ window.onload = async () => {
       button.classList.remove("pressed");
     });
     dataButtonTen.classList.add('pressed');
-    nameTitle.innerHTML = `Pokédex`;
-  };
+    nameTitle.innerHTML = `<p>Pokédex by<br><br>@juanmanueldaza<br>@opablon<br>@l0urencocarlos</p>`;
+    setTimeout(() => {
+      dataButtonTen.classList.remove('pressed');
+      synth.triggerAttackRelease("A7", "60n", "+0.01");
+      nameTitle.innerHTML = ``;
+    }, 2000);
+  }
 
   window.onkeydown = (e) => {
     if (e.keyCode === 37) {

@@ -58,3 +58,14 @@ function hidePokemonImageForLoadingAnimation() {
 function showPokemonImageForLoadingAnimation() {
   image.style.display = "block";
 }
+
+function searchForPokemonFirst() {
+  nameTitle.innerHTML = `<p>Search for a Pokémon first!</p>`;
+  setTimeout(() => {
+    dataButtons.forEach((button) => { 
+      button.classList.remove("pressed");
+    });
+    synth.triggerAttackRelease("A7", "60n", "+0.01");
+    nameTitle.innerHTML = ``;
+  }, 1300);
+}
