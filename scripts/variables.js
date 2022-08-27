@@ -1,5 +1,5 @@
 let searchInput = document.getElementById("input");
-let searchButton = document.getElementById("main_light_blue_button");
+let searchButton = document.getElementById("primary_screen_under_left_button");
 let image = document.getElementById("pokeImg");
 let loadingAnimationImg = document.getElementById("loadingGifAnimation");
 let nameTitle = document.getElementById("pokeName");
