@@ -12,6 +12,16 @@ window.onload = async () => {
       searchButton.onmousedown();
     }
   };
+  refreshButton.onclick = (e) => {
+    synth.triggerAttackRelease("A2", "60n", "+0.01");
+    setTimeout(() => {
+      window.location.reload();
+    }, 3000);
+    nameTitle.innerHTML = `<p>Reseting Pokédex</p>`;
+    setInterval(() => {
+          nameTitle.innerHTML += `.`;
+    }, 500);
+  }
   
   forwardButtonClickableArea.onmousedown = async () => {
     synth.triggerAttackRelease("E8", "60n", "+0.01");
