@@ -96,11 +96,11 @@ function handleSecondaryRightArrow() {
 
 async function handleMuteButton() {
   if (!volume.mute) {
-    unmuteIcon.classList.remove("hidden");
+    soundIcon.classList.remove("hidden");
     muteIcon.classList.add("hidden");
     volume.mute = true;
   } else {
-    unmuteIcon.classList.add("hidden");
+    soundIcon.classList.add("hidden");
     muteIcon.classList.remove("hidden");
     volume.mute = false;
   }

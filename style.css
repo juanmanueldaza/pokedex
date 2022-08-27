@@ -133,6 +133,10 @@ input {
   text-shadow: 1px 1px 2px rgb(32, 32, 32);
 }
 
+.soundIcons {
+  transform: translate(966px, 562px) scale(85%);
+}
+
 #secondary_left_arrow:hover,
 #secondary_right_arrow:hover {
   filter: invert();

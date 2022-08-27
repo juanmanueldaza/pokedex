@@ -59,6 +59,6 @@ let randomPokemon;
 
 let muteButton = document.getElementById("btn_orange");
 let muteIcon = document.getElementById("muteIcon");
-let unmuteIcon = document.getElementById("unmuteIcon");
+let soundIcon = document.getElementById("soundIcon");
 const volume = new Tone.Volume(0).toDestination();
 const synth = new Tone.DuoSynth().connect(volume);
