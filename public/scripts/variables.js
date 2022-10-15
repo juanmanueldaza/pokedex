@@ -1,32 +1,77 @@
-window.onload = async () => {
-  searchButton.onmousedown = async (e) => {
+document.addEventListener("DOMContentLoaded", function () {
+  searchInput = document.getElementById("input");
+  searchButton = document.getElementById("primary_screen_under_left_button");
+  refreshButton = document.getElementById("primary_screen_under_right_button");
+  helpButton = document.getElementById("main_light_blue_button");
+  image = document.getElementById("pokeImg");
+  loadingAnimationImg = document.getElementById("loadingGifAnimation");
+  nameTitle = document.getElementById("pokeName");
+  pokeGender = document.getElementById("pokeGender");
+  pokeTypes = document.getElementById("pokeTypes");
+  forwardButton = document.getElementById("d_pad_right");
+  forwardButtonClickableArea = document.getElementById(
+    "d_pad_right_clickable_area"
+  );
+  backwardButton = document.getElementById("d_pad_left");
+  backwardButtonClickableArea = document.getElementById(
+    "d_pad_left_clickable_area"
+  );
+  upButton = document.getElementById("d_pad_up");
+  upButtonClickableArea = document.getElementById("d_pad_up_clickable_area");
+  downButton = document.getElementById("d_pad_down");
+  downButtonClickableArea = document.getElementById(
+    "d_pad_down_clickable_area"
+  );
+  dPad = document.getElementById("d_pad");
+  cryButton = document.getElementById("primary_screen_red_button");
+  mainBigLed = document.getElementById("main_big_led");
+  speaker = document.getElementById("speaker");
+  secondaryLeftArrow = document.getElementById("secondary_left_arrow");
+  secondaryRightArrow = document.getElementById("secondary_right_arrow");
+  dataButtonOne = document.getElementById("btn_celeste1");
+  dataButtonTwo = document.getElementById("btn_celeste2");
+  dataButtonThree = document.getElementById("btn_celeste3");
+  dataButtonFour = document.getElementById("btn_celeste4");
+  dataButtonFive = document.getElementById("btn_celeste5");
+  dataButtonSix = document.getElementById("btn_celeste6");
+  dataButtonSeven = document.getElementById("btn_celeste7");
+  dataButtonEight = document.getElementById("btn_celeste8");
+  dataButtonNine = document.getElementById("btn_celeste9");
+  dataButtonTen = document.getElementById("btn_celeste10");
+  dataButtons = document.querySelectorAll(".btns_celestes");
+  muteButton = document.getElementById("btn_orange");
+  muteIcon = document.getElementById("muteIcon");
+  soundIcon = document.getElementById("soundIcon");
+  volume = new Tone.Volume(0).toDestination();
+  synth = new Tone.DuoSynth().connect(volume);
+  searchButton.onmousedown = async e => {
     if (helpMode) {
       return;
     } else {
       synth.triggerAttackRelease("C8", "60n", "+0.01");
-      dataButtons.forEach((button) => {
+      dataButtons.forEach(button => {
         button.classList.remove("pressed");
       });
       dataButtonOne.classList.add("pressed");
       await handleSearchButton(e);
     }
   };
-  searchButton.onmouseover = (e) => {
+  searchButton.onmouseover = e => {
     if (helpMode) {
       nameTitle.innerHTML = `<p>Search button</p>`;
     }
   };
-  searchButton.onmouseout = (e) => {
+  searchButton.onmouseout = e => {
     if (helpMode) {
       nameTitle.innerHTML = `<p>Hover over buttons for help</p>`;
     }
   };
-  searchInput.onkeydown = (e) => {
+  searchInput.onkeydown = e => {
     if (e.keyCode === 13) {
       searchButton.onmousedown();
     }
   };
-  refreshButton.onclick = (e) => {
+  refreshButton.onclick = e => {
     if (helpMode) {
       return;
     } else {
@@ -40,18 +85,18 @@ window.onload = async () => {
       }, 500);
     }
   };
-  refreshButton.onmouseover = (e) => {
+  refreshButton.onmouseover = e => {
     if (helpMode) {
       nameTitle.innerHTML = `<p>Reset button</p>`;
     }
   };
-  refreshButton.onmouseout = (e) => {
+  refreshButton.onmouseout = e => {
     if (helpMode) {
       nameTitle.innerHTML = `<p>Hover over buttons for help</p>`;
     }
   };
 
-  helpButton.onmousedown = (e) => {
+  helpButton.onmousedown = e => {
     if (document.body.style.filter === "grayscale(0.5)") {
       document.body.style.filter = "grayscale(0)";
       helpMode = false;
@@ -62,12 +107,12 @@ window.onload = async () => {
       nameTitle.innerHTML = `<p>Hover over buttons for help</p>`;
     }
   };
-  helpButton.onmouseover = (e) => {
+  helpButton.onmouseover = e => {
     if (document.body.style.filter === "grayscale(0.5)") {
       nameTitle.innerHTML = `<p>Push to exit help</p>`;
     }
   };
-  helpButton.onmouseout = (e) => {
+  helpButton.onmouseout = e => {
     if (document.body.style.filter === "grayscale(0.5)") {
       nameTitle.innerHTML = `<p>Hover over buttons for help</p>`;
     }
@@ -82,20 +127,20 @@ window.onload = async () => {
       handleForwardButton();
     }
   };
-  forwardButtonClickableArea.onmouseover = (e) => {
+  forwardButtonClickableArea.onmouseover = e => {
     forwardButton.classList.add("clickable");
     forwardButtonClickableArea.style.cursor = "pointer";
     if (helpMode) {
       nameTitle.innerHTML = `<p>Next pokémon</p>`;
     }
   };
-  forwardButtonClickableArea.onmouseout = (e) => {
+  forwardButtonClickableArea.onmouseout = e => {
     forwardButton.classList.remove("clickable");
     if (helpMode) {
       nameTitle.innerHTML = ``;
     }
   };
-  forwardButtonClickableArea.onmouseup = (e) => {
+  forwardButtonClickableArea.onmouseup = e => {
     dPad.classList.remove("d_pad_pressed");
   };
 
@@ -108,20 +153,20 @@ window.onload = async () => {
       handleBackwardButton();
     }
   };
-  backwardButtonClickableArea.onmouseover = (e) => {
+  backwardButtonClickableArea.onmouseover = e => {
     backwardButton.classList.add("clickable");
     backwardButtonClickableArea.style.cursor = "pointer";
     if (helpMode) {
       nameTitle.innerHTML = `<p>Previous pokémon</p>`;
     }
   };
-  backwardButtonClickableArea.onmouseout = (e) => {
+  backwardButtonClickableArea.onmouseout = e => {
     backwardButton.classList.remove("clickable");
     if (helpMode) {
       nameTitle.innerHTML = ``;
     }
   };
-  backwardButtonClickableArea.onmouseup = (e) => {
+  backwardButtonClickableArea.onmouseup = e => {
     dPad.classList.remove("d_pad_pressed");
   };
 
@@ -134,20 +179,20 @@ window.onload = async () => {
       handleUpButton();
     }
   };
-  upButtonClickableArea.onmouseover = (e) => {
+  upButtonClickableArea.onmouseover = e => {
     upButton.classList.add("clickable");
     upButtonClickableArea.style.cursor = "pointer";
     if (helpMode) {
       nameTitle.innerHTML = `<p>Next image</p>`;
     }
   };
-  upButtonClickableArea.onmouseout = (e) => {
+  upButtonClickableArea.onmouseout = e => {
     upButton.classList.remove("clickable");
     if (helpMode) {
       nameTitle.innerHTML = ``;
     }
   };
-  upButtonClickableArea.onmouseup = (e) => {
+  upButtonClickableArea.onmouseup = e => {
     dPad.classList.remove("d_pad_pressed");
   };
 
@@ -160,20 +205,20 @@ window.onload = async () => {
       handleDownButton();
     }
   };
-  downButtonClickableArea.onmouseover = (e) => {
+  downButtonClickableArea.onmouseover = e => {
     downButton.classList.add("clickable");
     downButtonClickableArea.style.cursor = "pointer";
     if (helpMode) {
       nameTitle.innerHTML = `<p>Previous image</p>`;
     }
   };
-  downButtonClickableArea.onmouseout = (e) => {
+  downButtonClickableArea.onmouseout = e => {
     downButton.classList.remove("clickable");
     if (helpMode) {
       nameTitle.innerHTML = ``;
     }
   };
-  downButtonClickableArea.onmouseup = (e) => {
+  downButtonClickableArea.onmouseup = e => {
     dPad.classList.remove("d_pad_pressed");
   };
 
@@ -184,12 +229,12 @@ window.onload = async () => {
       handleCryButton();
     }
   };
-  cryButton.onmouseover = (e) => {
+  cryButton.onmouseover = e => {
     if (helpMode) {
       nameTitle.innerHTML = `<p>Play pokémon cry</p>`;
     }
   };
-  cryButton.onmouseout = (e) => {
+  cryButton.onmouseout = e => {
     if (helpMode) {
       nameTitle.innerHTML = ``;
     }
@@ -204,19 +249,19 @@ window.onload = async () => {
       return;
     } else {
       synth.triggerAttackRelease("A6", "60n", "+0.01");
-      dataButtons.forEach((button) => {
+      dataButtons.forEach(button => {
         button.classList.remove("pressed");
       });
       dataButtonOne.classList.add("pressed");
       await handleRandom();
     }
   };
-  mainBigLed.onmouseover = (e) => {
+  mainBigLed.onmouseover = e => {
     if (helpMode) {
       nameTitle.innerHTML = `<p>Random pokémon</p>`;
     }
   };
-  mainBigLed.onmouseout = (e) => {
+  mainBigLed.onmouseout = e => {
     if (helpMode) {
       nameTitle.innerHTML = ``;
     }
@@ -230,12 +275,12 @@ window.onload = async () => {
       handleSecondaryLeftArrow();
     }
   };
-  secondaryLeftArrow.onmouseover = (e) => {
+  secondaryLeftArrow.onmouseover = e => {
     if (helpMode) {
       nameTitle.innerHTML = `<p>Previous atribute</p>`;
     }
   };
-  secondaryLeftArrow.onmouseout = (e) => {
+  secondaryLeftArrow.onmouseout = e => {
     if (helpMode) {
       nameTitle.innerHTML = ``;
     }
@@ -249,12 +294,12 @@ window.onload = async () => {
       handleSecondaryRightArrow();
     }
   };
-  secondaryRightArrow.onmouseover = (e) => {
+  secondaryRightArrow.onmouseover = e => {
     if (helpMode) {
       nameTitle.innerHTML = `<p>Next atribute</p>`;
     }
   };
-  secondaryRightArrow.onmouseout = (e) => {
+  secondaryRightArrow.onmouseout = e => {
     if (helpMode) {
       nameTitle.innerHTML = ``;
     }
@@ -267,12 +312,12 @@ window.onload = async () => {
       handleMuteButton();
     }
   };
-  muteButton.onmouseover = (e) => {
+  muteButton.onmouseover = e => {
     if (helpMode) {
       nameTitle.innerHTML = `<p>Mute / Unmute</p>`;
     }
   };
-  muteButton.onmouseout = (e) => {
+  muteButton.onmouseout = e => {
     if (helpMode) {
       nameTitle.innerHTML = ``;
     }
@@ -283,7 +328,7 @@ window.onload = async () => {
       return;
     } else {
       synth.triggerAttackRelease("C4", "500n", "+0.01");
-      dataButtons.forEach((button) => {
+      dataButtons.forEach(button => {
         button.classList.remove("pressed");
       });
       dataButtonOne.classList.add("pressed");
@@ -294,12 +339,12 @@ window.onload = async () => {
       }
     }
   };
-  dataButtonOne.onmouseover = (e) => {
+  dataButtonOne.onmouseover = e => {
     if (helpMode) {
       nameTitle.innerHTML = `<p>Data slot 1</p>`;
     }
   };
-  dataButtonOne.onmouseout = (e) => {
+  dataButtonOne.onmouseout = e => {
     if (helpMode) {
       nameTitle.innerHTML = ``;
     }
@@ -310,7 +355,7 @@ window.onload = async () => {
       return;
     } else {
       synth.triggerAttackRelease("C5", "500n", "+0.01");
-      dataButtons.forEach((button) => {
+      dataButtons.forEach(button => {
         button.classList.remove("pressed");
       });
       dataButtonTwo.classList.add("pressed");
@@ -321,12 +366,12 @@ window.onload = async () => {
       }
     }
   };
-  dataButtonTwo.onmouseover = (e) => {
+  dataButtonTwo.onmouseover = e => {
     if (helpMode) {
       nameTitle.innerHTML = `<p>Data slot 2</p>`;
     }
   };
-  dataButtonTwo.onmouseout = (e) => {
+  dataButtonTwo.onmouseout = e => {
     if (helpMode) {
       nameTitle.innerHTML = ``;
     }
@@ -337,7 +382,7 @@ window.onload = async () => {
       return;
     } else {
       synth.triggerAttackRelease("C6", "500n", "+0.01");
-      dataButtons.forEach((button) => {
+      dataButtons.forEach(button => {
         button.classList.remove("pressed");
       });
       dataButtonThree.classList.add("pressed");
@@ -348,12 +393,12 @@ window.onload = async () => {
       }
     }
   };
-  dataButtonThree.onmouseover = (e) => {
+  dataButtonThree.onmouseover = e => {
     if (helpMode) {
       nameTitle.innerHTML = `<p>Data slot 3</p>`;
     }
   };
-  dataButtonThree.onmouseout = (e) => {
+  dataButtonThree.onmouseout = e => {
     if (helpMode) {
       nameTitle.innerHTML = ``;
     }
@@ -364,7 +409,7 @@ window.onload = async () => {
       return;
     } else {
       synth.triggerAttackRelease("A4", "500n", "+0.01");
-      dataButtons.forEach((button) => {
+      dataButtons.forEach(button => {
         button.classList.remove("pressed");
       });
       dataButtonFour.classList.add("pressed");
@@ -375,12 +420,12 @@ window.onload = async () => {
       }
     }
   };
-  dataButtonFour.onmouseover = (e) => {
+  dataButtonFour.onmouseover = e => {
     if (helpMode) {
       nameTitle.innerHTML = `<p>Data slot 4</p>`;
     }
   };
-  dataButtonFour.onmouseout = (e) => {
+  dataButtonFour.onmouseout = e => {
     if (helpMode) {
       nameTitle.innerHTML = ``;
     }
@@ -391,7 +436,7 @@ window.onload = async () => {
       return;
     } else {
       synth.triggerAttackRelease("A5", "500n", "+0.01");
-      dataButtons.forEach((button) => {
+      dataButtons.forEach(button => {
         button.classList.remove("pressed");
       });
       dataButtonFive.classList.add("pressed");
@@ -402,12 +447,12 @@ window.onload = async () => {
       }
     }
   };
-  dataButtonFive.onmouseover = (e) => {
+  dataButtonFive.onmouseover = e => {
     if (helpMode) {
       nameTitle.innerHTML = `<p>Data slot 5</p>`;
     }
   };
-  dataButtonFive.onmouseout = (e) => {
+  dataButtonFive.onmouseout = e => {
     if (helpMode) {
       nameTitle.innerHTML = ``;
     }
@@ -418,7 +463,7 @@ window.onload = async () => {
       return;
     } else {
       synth.triggerAttackRelease("A6", "500n", "+0.01");
-      dataButtons.forEach((button) => {
+      dataButtons.forEach(button => {
         button.classList.remove("pressed");
       });
       dataButtonSix.classList.add("pressed");
@@ -429,12 +474,12 @@ window.onload = async () => {
       }
     }
   };
-  dataButtonSix.onmouseover = (e) => {
+  dataButtonSix.onmouseover = e => {
     if (helpMode) {
       nameTitle.innerHTML = `<p>Data slot 6</p>`;
     }
   };
-  dataButtonSix.onmouseout = (e) => {
+  dataButtonSix.onmouseout = e => {
     if (helpMode) {
       nameTitle.innerHTML = ``;
     }
@@ -445,7 +490,7 @@ window.onload = async () => {
       return;
     } else {
       synth.triggerAttackRelease("B4", "500n", "+0.01");
-      dataButtons.forEach((button) => {
+      dataButtons.forEach(button => {
         button.classList.remove("pressed");
       });
       dataButtonSeven.classList.add("pressed");
@@ -456,12 +501,12 @@ window.onload = async () => {
       }
     }
   };
-  dataButtonSeven.onmouseover = (e) => {
+  dataButtonSeven.onmouseover = e => {
     if (helpMode) {
       nameTitle.innerHTML = `<p>Data slot 7</p>`;
     }
   };
-  dataButtonSeven.onmouseout = (e) => {
+  dataButtonSeven.onmouseout = e => {
     if (helpMode) {
       nameTitle.innerHTML = ``;
     }
@@ -472,7 +517,7 @@ window.onload = async () => {
       return;
     } else {
       synth.triggerAttackRelease("B5", "500n", "+0.01");
-      dataButtons.forEach((button) => {
+      dataButtons.forEach(button => {
         button.classList.remove("pressed");
       });
       dataButtonEight.classList.add("pressed");
@@ -483,12 +528,12 @@ window.onload = async () => {
       }
     }
   };
-  dataButtonEight.onmouseover = (e) => {
+  dataButtonEight.onmouseover = e => {
     if (helpMode) {
       nameTitle.innerHTML = `<p>Data slot 8</p>`;
     }
   };
-  dataButtonEight.onmouseout = (e) => {
+  dataButtonEight.onmouseout = e => {
     if (helpMode) {
       nameTitle.innerHTML = ``;
     }
@@ -499,7 +544,7 @@ window.onload = async () => {
       return;
     } else {
       synth.triggerAttackRelease("B6", "500n", "+0.01");
-      dataButtons.forEach((button) => {
+      dataButtons.forEach(button => {
         button.classList.remove("pressed");
       });
       dataButtonNine.classList.add("pressed");
@@ -510,12 +555,12 @@ window.onload = async () => {
       }
     }
   };
-  dataButtonNine.onmouseover = (e) => {
+  dataButtonNine.onmouseover = e => {
     if (helpMode) {
       nameTitle.innerHTML = `<p>Data slot 9</p>`;
     }
   };
-  dataButtonNine.onmouseout = (e) => {
+  dataButtonNine.onmouseout = e => {
     if (helpMode) {
       nameTitle.innerHTML = ``;
     }
@@ -526,7 +571,7 @@ window.onload = async () => {
       return;
     } else {
       synth.triggerAttackRelease("F4", "500n", "+0.01");
-      dataButtons.forEach((button) => {
+      dataButtons.forEach(button => {
         button.classList.remove("pressed");
       });
       dataButtonTen.classList.add("pressed");
@@ -538,23 +583,23 @@ window.onload = async () => {
       }, 2000);
     }
   };
-  dataButtonTen.onmouseover = (e) => {
+  dataButtonTen.onmouseover = e => {
     if (helpMode) {
       nameTitle.innerHTML = `<p>Pokédex by<br><br>@juanmanueldaza<br>@opablon<br>@l0urencocarlos</p>`;
     }
   };
-  dataButtonTen.onmouseout = (e) => {
+  dataButtonTen.onmouseout = e => {
     if (helpMode) {
       nameTitle.innerHTML = ``;
     }
   };
 
-  window.onkeydown = (e) => {
+  window.onkeydown = e => {
     if (helpMode) {
       return;
     } else {
       if (e.keyCode === 37) {
-        backwardButton.onmousedown();
+        backwardButton.click();
       } else if (e.keyCode === 39) {
         forwardButton.onmousedown();
       } else if (e.keyCode === 38) {
@@ -564,7 +609,7 @@ window.onload = async () => {
       }
     }
   };
-  window.onmousewheel = (e) => {
+  window.onmousewheel = e => {
     if (helpMode) {
       return;
     } else {
@@ -575,4 +620,62 @@ window.onload = async () => {
       }
     }
   };
-};
+});
+let searchInput;
+let searchButton;
+let refreshButton;
+let helpButton;
+let image;
+let loadingAnimationImg;
+let nameTitle;
+let pokeGender;
+let pokeTypes;
+
+let forwardButton;
+let forwardButtonClickableArea;
+let backwardButton;
+let backwardButtonClickableArea;
+let upButton;
+let upButtonClickableArea;
+let downButton;
+let downButtonClickableArea;
+let dPad;
+let cryButton;
+let mainBigLed;
+let speaker;
+let secondaryLeftArrow;
+let secondaryRightArrow;
+
+let dataButtonOne;
+let dataButtonTwo;
+let dataButtonThree;
+let dataButtonFour;
+let dataButtonFive;
+let dataButtonSix;
+let dataButtonSeven;
+let dataButtonEight;
+let dataButtonNine;
+let dataButtonTen;
+let dataButtons;
+
+let pokemonStats;
+let statsTitles = ["Name", "Height", "HP", "Attack", "Defense", "Speed"];
+let statsPosition = 0;
+let spritePosition = 0;
+let availableSprites;
+let spriteKey;
+let spriteSrc;
+let spriteAmount;
+let data;
+let pokeId;
+let pokeName;
+let poketypeOne;
+let poketypeTwo;
+let randomPokemon;
+
+let muteButton;
+let muteIcon;
+let soundIcon;
+let volume;
+let synth;
+let helpMode;
